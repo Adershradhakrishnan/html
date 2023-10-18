@@ -1,0 +1,33 @@
+h1{
+    border:2px solid red;
+}
+p{
+    background-color: antiquewhite;
+}
+.heading2{
+    border:2px solid blue;
+    background-color: aqua;
+
+
+}
+.heading2-1{
+    border:2px solid green;
+    background-color: aquamarine;
+
+}
+#p1{
+    border:2px solid yellow;
+    background-color: blanchedalmond;
+}
+#p2{
+    border:2px solid orange;
+    background-color: blueviolet;
+}
+div{
+    background-color:  royalblue;
+    border:2px solid orange;
+}
+span{
+    background-color: green;
+    border:2px solid blueviolet;
+}
