@@ -7,22 +7,69 @@
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-    <h1>Sign up</h1>
-    <form action="asw.js">
-        <label for="textId">First Name</label>
-        <input type="text" name="mytext" id="textId" value="Enter First Name">
-        <div>
-        <label for="textId">Last Name</label>
-        <input type="text" name="mytext" id="textId" value="Enter Last Name">
+    <form>
+        <div class="right">
+            <h1 class="start">Sign up</h1><br>
+            <div>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" value="Enter First Name">
+            </div><br>
+            <div>
+                <label for="last name">Last name:</label>
+                <input type="text" id="lastname" value="Enter Last Name">
+
+            </div><br>
+            <div>
+                <label for="dates">Date Of Birth:</label>
+                <select name="dates" id="dates">
+                    <option>dates</option>
+                </select>
+                <select name="month">
+                    <option>month</option>
+                </select>
+                <select>
+                    <option>year</option>
+                </select>
+            </div><br>
+            <div>
+                <label for="male">Gender:</label>
+                <input type="radio" id="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female">
+                <label for="female">Female</label>
+            </div><br>
+            <div>
+                <label for="country1">Country:</label>
+                <select name="country">
+                    <option>country</option>
+                </select>
+            </div><br>
+            <div>
+                <label for="mail">E-Mail:</label>
+                <input type="text" id="mail" value="Enter the email">
+            </div><br>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" value="Enter phone">
+            </div><br>
+            <div>
+                <label for="password">Password:</label>
+                <input type="text" id="password">
+            </div><br>
+            <div>
+                <label for="confirm">Confirm password:</label>
+                <input type="text" id="confirm">
+            </div><br>
+            <div>
+                <label for="agree"></label>
+                <input type="checkbox" id="agree">
+                <label for="agree">I Agree to the Terms of Use</label>
+            </div><br>
         </div>
-        <label for="dateId">Date of Birth</label>
-<input type="date" id="dateId">
-<div>
-<label for="checkboxId">Male</label>
-<input type="checkbox" id="checkboxId">
-</div>
-<label for="checkboxId">Female</label>
-<input type="checkbox" id="checkboxId">
+        <div class="top" style="background-color: orange;">
+        <button type="submit" style="background-color: green;">Submit</button>
+        <button type="submit" style="background-color: red;">Cancel</button>
+        </div>
 
     </form>
 </body>

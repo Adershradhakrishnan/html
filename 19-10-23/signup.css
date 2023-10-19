@@ -3,8 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-  h1{
-    background-color: yellowgreen;
-    color: yellow;
-    border:1px yellowgreen;
+  .start{
+    background-color: orange;
+    color: white;
+    text-align: left;
+  }
+
+  .right{
+    background-color: blueviolet;
+    text-align: center;
+  }
+
+  .top{
+    border: 5px solid orange;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
