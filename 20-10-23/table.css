@@ -1,0 +1,22 @@
+table,th,td{
+    border: 2px solid black;
+    border-collapse: "collapse";
+    background-color: aqua;
+
+}
+
+h1{
+    text-align: center;
+}
+ p{
+    font-family: 'Times New Roman';
+ }
+
+ #outer{
+    border: 2px solid red;
+    font-size: 25px;
+ }
+
+ #inner{
+    font-size: 50px;
+ }
