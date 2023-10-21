@@ -27,3 +27,20 @@ li a{
 li button{
     background-color: orange;
 }
+.ab{
+    display: inline;
+    color: white;
+    margin: 0px 72px 0px 86px;
+}
+.nav-logo{
+    display: inline;
+    font-size: 25px;
+    color: orange;
+    margin-right: 75px;
+}
+input{
+    margin-right: 3px;
+}
+button{
+    background-color: orange;
+}
