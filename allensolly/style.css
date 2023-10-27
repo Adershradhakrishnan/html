@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 15px 40px 0px 40px;
+}
+
+.nav-container{
+    background-color: black;
+    border: 2px solid red;
+    height: 60px;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-list{
+    border: 2px solid black;
+}
+
+.nav-item{
+   border: 2px solid green; 
+   display: inline;
+   color: white;
+   margin:0px 42px 0px 56px ;
+
+}
+

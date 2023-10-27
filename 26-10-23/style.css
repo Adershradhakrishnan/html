@@ -12,32 +12,32 @@
     margin: auto;
     display: flex;
     
-    /*flex-direction: row;
+    /* flex-direction: row;
     flex-direction: column;
     flex-direction:row-reverse;
-    flex-direction: column-reverse;*/
-    /*flex-wrap: nowrap;
+    flex-direction: column-reverse; */
+    /* flex-wrap: nowrap;
     flex-wrap: wrap;
-    flex-wrap: wrap-reverse;*/
-    /*flex-flow: flex-direction flex-wrap;*/
+    flex-wrap: wrap-reverse; */
+    /* flex-flow: flex-direction flex-wrap; */
     flex-flow: row wrap;
 
     justify-content: center;
-    justify-content: space-around;
+   /* justify-content: space-around;
     justify-content: space-evenly;
-    justify-content: space-between;
+    justify-content: space-between; */
 
     align-items: center;
    /* align-items: flex-end;
     align-items: flex-start;
-    align-items: stretch;*/
+    align-items: stretch; */
 
     
 }
 
 .box{
     width: 200px;
-   /* height: 200px;*/
+    height: 200px; 
     background-color: red;
     margin: 3px;
     text-align: center;
@@ -46,12 +46,15 @@
 .box1{
     order: 1;
    /* flex-grow: 3;
-    flex-shrink: 3;*/
+    flex-shrink: 3; */
 }
 .box2{
     order: 2;
     flex-basis: 50px;
-   /* flex: flex-grow flex-shrink flex-basis;*/
-   /* flex: 3 3 50;*/
+   /* flex: flex-grow flex-shrink flex-basis; */
+   /* flex: 3 3 50; */
+   align-self: flex-end;
+   align-self: center;
+   align-self: flex-start;
    
 }
