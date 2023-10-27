@@ -9,8 +9,9 @@
     top: 10px;
     height: 70%;
     width: 60%; 
-    background-image: url("/html/images/garden.jpg");
+    background-image: url('istockphoto-1347784849-612x612.jpg');
     background-size: contain;
+    right: 0;
     z-index: -1;
     
 }
