@@ -5,31 +5,56 @@
 }
 
 nav{
-    border: 1px solid black;
-    padding: 5px;
-    margin: 15px 40px 0px 40px;
-}
-
-.nav-container{
+    display: flex;
+    justify-content: space-between;
     background-color: black;
-    border: 2px solid red;
-    height: 60px;
-
-}
-a{
-    text-decoration: none;
-    color: inherit;
+    color: white;
+    padding: 10px;
 }
 
-.nav-list{
-    border: 2px solid black;
-}
-
-.nav-item{
-   border: 2px solid green; 
-   display: inline;
-   color: white;
-   margin:0px 42px 0px 56px ;
+.left-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
+.left-section select{
+    border: 0;
+    background: none;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+.left-section img,select{
+    margin: 0 8px 0 8px;
+}
+
+.right-section{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.right-section .stores,.contact,.login,.heart,.bag{
+    padding: 0 5px 0 5px;
+    border-right: 2px solid white;
+}
+.stores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
