@@ -88,6 +88,23 @@ ul{
     display: flex;
     border-bottom: 2px solid blue;
 }
+.delivery{
+    background-color: #ffdf00;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 40px 0 10px;
+    padding: 10px;
+}
+.express{
+    font-size: 12px;
+    color:#0E3051;
+}
+.nearest{
+    display: block;
+    font-size: 10px;
+    color: #0E3051;
+}
 .move{
     margin: right 10px; 
 }
@@ -188,5 +205,21 @@ ul{
 .categories1{
     border-bottom: 2px solid yellowgreen;
 }
+.sixty{
+    display: flex;
+    margin-top: 20px;
+}
+.sixty1{
+    margin-left: 50px;
+}
+.fonts{
+    position: relative;
+    color: white;
+}
+.fonts1{
+    display: flex;
+    text-align: left;
+}
+
 
 
