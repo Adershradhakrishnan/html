@@ -342,3 +342,46 @@ footer{
     text-align: center;
     margin-left: 10px;
 }
+.divider1{
+    margin-top: 10px;
+}
+.lookbook{
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+}
+.centre1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border: 3px solid white;
+}
+button{
+    color: black;
+    background-color: orange;
+}
+.boxxx{
+    border: 2px solid gold;
+    position: relative;
+    height: 500px;
+    background-image: url(../allensolly/images/reading.jpeg);
+}
+.boxx1{
+    display: flex;
+}
+.boxx{
+    position: absolute;
+    top: 80px;
+    right: 60px;
+    border: 2px solid gold;
+    width: 400px;
+    height: 200px;
+    background-color: gold;
+    text-align: center;
+}
+.ash{
+    color: black;
+    background-color: #0E3051;
+}
