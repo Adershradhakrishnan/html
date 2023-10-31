@@ -442,3 +442,68 @@ button{
     justify-content: space-evenly;
     background-color: white;
 }
+.climax{
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+.pqrst{
+    margin-top: 30px;
+    border: 1px solid black;
+}
+.climalist2 ul{
+    margin-right: 500px;
+}
+.join{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-right: 240px;
+    margin-bottom: 30px;
+}
+.multi{
+    display: flex;
+    border-bottom: 1px solid black;
+    margin-right: 50px;
+}
+.multi img{
+    margin-left: 240px;
+
+}
+.socialmedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.social{
+    margin-right: 100px;
+}
+.aksh{
+    border-top: 2px solid black;
+    margin-top: 30px;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.subr{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.athul{
+    margin-top: 10px;
+    margin-left: 1200px;
+}
+.interval{
+    display: flex;
+}
+.copy{
+    margin-top: 6px;
+    margin-left: 800px;
+}
+.cat{
+    margin-top: 6px;
+    margin-left: 800px;
+}
+.interval{
+    height: 60px;
+}
