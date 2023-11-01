@@ -87,6 +87,8 @@ ul{
 .box1{
     display: flex;
     border-bottom: 2px solid blue;
+    margin-left: 100px;
+    
     
 }
 
@@ -95,10 +97,16 @@ ul{
     display: flex;
     align-items: center;
     border-radius: 20px;
-    margin: 0 40px 0 10px;
+    /* margin: 0 40px 0 10px; */
     padding: 10px;
+    margin-left: 30px;
 }
-.express delivery{
+
+.delivery img,.express-delivery,.nearest {
+    margin: 0 10px 0 10px;
+    
+}
+.express-delivery{
     font-size: 12px;
     color:#0E3051;
 }
@@ -367,7 +375,7 @@ button{
     border: 2px solid gold;
     position: relative;
     height: 500px;
-    background-image: url(../allensolly/images/reading.jpeg);
+    background: url(../allensolly/images/reading.jpeg) no-repeat center center/cover;
 }
 .boxx1{
     display: flex;
@@ -494,18 +502,18 @@ button{
     margin-top: 10px;
     margin-left: 30px;
 }
-.athul{
+.adersh{
     margin-top: 10px;
     margin-left: 1200px;
 }
 .interval{
     display: flex;
 }
-.copy{
+.madhura{
     margin-top: 6px;
     margin-left: 800px;
 }
-.cat{
+.priv{
     margin-top: 6px;
     margin-left: 25px;
 }
