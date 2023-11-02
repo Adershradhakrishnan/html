@@ -3,3 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:gray;
+    color: white;
+    padding: 10px;
+    height: 60px;
+}
+.navigation{
+    background-color: white;
+    position: sticky;
+    top: 0px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    margin-right: 50px;
+    align-items: center;
+    text-decoration: none;
+}
+.applelogo{
+    margin-right: 35px;
+    
+}
+.store,.mac,.ipad,.iphone,.watch,.vision,.airpods,.tv,.entertainments,.accessories,.support{
+    margin-right: 30px;
+    
+}
+
+
+.list a{
+    text-decoration: none;
+    color: white;
+}
