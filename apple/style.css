@@ -4,39 +4,42 @@
     box-sizing: border-box;
 }
 nav{
-    display: flex;
-    justify-content: space-between;
-    background-color:gray;
-    color: white;
-    padding: 10px;
-    height: 60px;
-}
-.navigation{
-    background-color: white;
-    position: sticky;
-    top: 0px;
-    display: flex;
+    background-color: black;
+    
     
 }
-ul{
+  ul{
     list-style-type: none;
     display: flex;
-    margin-right: 50px;
+    margin-left: 50px;
     align-items: center;
-    text-decoration: none;
-    color: black;
+     position: sticky;
+    
 }
 .applelogo{
-    margin-right: 35px;
+    margin-left: 35px;
+    background-color:black;
+    
+    
     
 }
-.store,.mac,.ipad,.iphone,.watch,.vision,.airpods,.tv,.entertainments,.accessories,.support{
-    margin-right: 30px;
-    
+.store,.mac,.ipa,.iph,.watch,.vis,.air,.tv,.enter,.acc,.supp{
+    margin-right: 10px;
+    margin-left: 40px;
+    align-items: center;
 }
+
+
 
 
 .list a{
     text-decoration: none;
-    color: black;
+    color:white;
+}
+.box1{
+    margin-right: 35px;
+    
+    align-items: center;
+    display: flex;
+    
 }
