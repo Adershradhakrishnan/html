@@ -14,6 +14,7 @@ nav{
     margin-left: 50px;
     align-items: center;
      position: sticky;
+     justify-content: center;
     
 }
 .applelogo{
@@ -37,9 +38,42 @@ nav{
     color:white;
 }
 .box1{
-    margin-right: 35px;
+    margin-left: 35px;
     
     align-items: center;
     display: flex;
     
+}
+.iphone{
+    position: absolute;
+    color: white;
+    top: 100px;
+    left: 40%;
+    margin-left: 100px;
+}
+.learn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 200px;
+    left: 40%;
+}
+.wearing{
+   align-items: center; 
+   justify-content: center;
+   font-size: 21px;
+   font-weight: 400;
+   
+}
+.wearing a{
+    text-decoration: none;
+    margin-left: 40px;
+}
+.learning{
+    margin-left: 80px;
+    
+}
+.learning a{
+    text-decoration: none;
 }
