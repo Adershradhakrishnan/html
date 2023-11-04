@@ -109,4 +109,37 @@ nav{
 .hei1{
     margin-left: 80px;
 }
+.load{
+    position: relative;
+    text-align: center;
+}
+.loader{
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    color: black;
+}
+.one{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
+}
+.three{
+    font-size: 21px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    
+}
+.one a{
+    text-decoration: none;
+    margin-left: 40px;
+}
+.two{
+    margin-left: 40px;
+}
+
 
