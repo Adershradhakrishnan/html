@@ -77,3 +77,36 @@ nav{
 .learning a{
     text-decoration: none;
 }
+.dear{
+    position: relative;
+    text-align: center;
+}
+.titanic{
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    color: black;
+}
+.hei{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
+}
+.hai{
+    font-size: 21px;
+    
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+.hei a{
+    text-decoration: none;
+    margin-left: 40px;
+}
+.hei1{
+    margin-left: 80px;
+}
+
