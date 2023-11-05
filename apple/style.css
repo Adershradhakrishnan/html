@@ -141,5 +141,207 @@ nav{
 .two{
     margin-left: 40px;
 }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    width: 100%;
+}
+.source{
+    position: relative;
+    text-align: left;
+}
+.sourcer{
+    position: absolute;
+    top: 30px;
+    left: 20%;
+}
+.four{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 20%;
+    justify-content: center;
+    align-items: center;
+}
+.six{
+    font-size: 21px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+.four a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+.short{
+    position: relative;
+    text-align: left;
+}
+.shorter{
+    position: absolute;
+    top: 30px;
+    left: 20%;
+}
+.seven{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.nine{
+    font-size: 21px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+.seven a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+.eight{
+    margin-left: 200px;
+}
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    width: 100%;
+}
+.found{
+    position: relative;
+    text-align: left;
+}
+.founder{
+    position: absolute;
+    top: 30px;
+    left: 20%;
+    
+}
+.ten{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.twelve{
+    font-size: 21px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+.ten a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+.eleven{
+    margin-left: 150px;
+}
+.front{
+    position: relative;
+    text-align: left;
+}
+.fronter{
+    position: absolute;
+    top: 70px;
+    left: 20%;
+}
+.thirteen{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    justify-content: center;
+    align-items: center;
+
+}
+.fifteen{
+    font-size: 21px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+.thirteen a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+    
+.fourteen{
+    margin-left: 50px;
+}
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    width: 100%;
+}
+.select{
+    position: relative;
+    text-align: left;
+}
+.selector{
+    position: absolute;
+    top: 30px;
+    left: 20%;
+}
+.sixteen{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.eighteen{
+    font-size: 21px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+.sixteen a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+.seventeen{
+    margin-left: 50px;
+}
+.right{
+    position: relative;
+    text-align: left;
+}
+.righter{
+    position: absolute;
+    top: 30px;
+    left: 20%;
+}
+.ninteen{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.twentyone{
+    font-size: 21px;
+    font-weight: 400;
+    justify-content: center;
+}
+.ninteen a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+.twenty{
+    margin-left: 50px;
+}
+
+
+
+
 
 
