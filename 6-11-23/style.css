@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    margin: 1rem;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+nav::before{
+    background: url('images/pexels-photo-14364297.jpeg'); no-repeat
+    
+}
