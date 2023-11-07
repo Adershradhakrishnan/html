@@ -339,6 +339,22 @@ nav{
 .twenty{
     margin-left: 50px;
 }
+.image{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.paragragh{
+ margin-top: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+}
+
+    
+    
+
+
 
 
 
