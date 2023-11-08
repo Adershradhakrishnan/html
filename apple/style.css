@@ -342,15 +342,63 @@ nav{
 .image{
     margin-top: 20px;
     margin-bottom: 25px;
+    margin-left: 90px;
 }
 .paragragh{
- margin-top: 50px;
- display: flex;
- justify-content: center;
- align-items: center;
- text-align: center;
+ margin-top: 10px;
+ height: 300px;
+ 
+ 
+ 
+ width: 60%;
+ margin-left: 300px;
+ letter-spacing: 2px;
+ line-height: 20px;
+}
+.large{
+    margin-top: 50px;
+    border-top: 2px solid blue;
+}
+.small{
+    display: flex;
+    margin-left: 300px;
+    margin-top: 30px;
+}
+.small ul{
+    list-style-type: none;
+}
+.small1{
+    margin-left: 50px;
+}
+.small1 li:nth-child(5){
+    margin-top: 10px;
+}
+.small2{
+    margin-left: 50px;
+}
+.small3{
+    margin-left: 50px;
 }
 
+/*n=1,2,3*/
+.small3 li:nth-child(4n){
+    margin-top: 10px;
+}
+.small4{
+    margin-left: 50px;
+}
+.small4 li:nth-child(9){
+    margin-top: 10px;
+
+
+}
+.small li:nth-child(13){
+    margin-top: 10px;
+}
+.happy{
+    margin-top: 20px;
+    margin-left: 300px;
+}
     
     
 
