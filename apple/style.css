@@ -358,26 +358,43 @@ nav{
 .large{
     margin-top: 50px;
     border-top: 2px solid blue;
+    flex-direction:column ;
+    
 }
 .small{
     display: flex;
     margin-left: 300px;
     margin-top: 30px;
+    
 }
 .small ul{
     list-style-type: none;
+    flex-direction: column;
 }
 .small1{
-    margin-left: 50px;
+    margin-left: 500px;
+    margin-bottom: 300px;
+    display: flex;
+}
+.small1 ul{
+    flex-direction: column;
 }
 .small1 li:nth-child(5){
     margin-top: 10px;
 }
 .small2{
     margin-left: 50px;
+    display: flex;
+}
+.small2 ul{
+    flex-direction: column;
 }
 .small3{
     margin-left: 50px;
+    display: flex;
+}
+.small3 ul{
+    flex-direction: column;
 }
 
 /*n=1,2,3*/
@@ -386,6 +403,11 @@ nav{
 }
 .small4{
     margin-left: 50px;
+    display: flex;
+    
+}
+.small4 ul{
+    flex-direction: column;
 }
 .small4 li:nth-child(9){
     margin-top: 10px;
