@@ -359,12 +359,14 @@ nav{
     margin-top: 50px;
     border-top: 2px solid blue;
     flex-direction:column ;
+    margin-bottom: 15px;
     
 }
 .small{
     display: flex;
-    margin-left: 300px;
+    margin-left: 0px;
     margin-top: 30px;
+    
     
 }
 .small ul{
@@ -372,8 +374,8 @@ nav{
     flex-direction: column;
 }
 .small1{
-    margin-left: 500px;
-    margin-bottom: 300px;
+    margin-left: 50px;
+    
     display: flex;
 }
 .small1 ul{
@@ -383,14 +385,14 @@ nav{
     margin-top: 10px;
 }
 .small2{
-    margin-left: 50px;
+    margin-left: 70px;
     display: flex;
 }
 .small2 ul{
     flex-direction: column;
 }
 .small3{
-    margin-left: 50px;
+    margin-left: 90px;
     display: flex;
 }
 .small3 ul{
@@ -402,8 +404,9 @@ nav{
     margin-top: 10px;
 }
 .small4{
-    margin-left: 50px;
+    margin-left: 110px;
     display: flex;
+    
     
 }
 .small4 ul{
