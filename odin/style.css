@@ -117,7 +117,17 @@
  .he{
   justify-content: center;
   text-align: center;
+  padding-top: 100px;
+  margin: auto;
   
+ }
+ .he h2{
+  font-size: 1.875rem;
+  font-weight: 500;
+ }
+ .he p{
+  font-size: 1.125rem;
+  margin-top: 10px;
  }
 
  
