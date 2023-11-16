@@ -45,6 +45,7 @@
     background-color: aquamarine;
     margin: auto;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .box1{
@@ -88,6 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .box2{
@@ -160,4 +162,9 @@
     transform: rotate(-45deg);
     transform: skew(40deg);
     transform: skew(-40deg);
+    transform: scale(2);
+    transform: scale(-2);
+    transform: translateX(125px);
+    transform: translateY(125px);
+    
 }

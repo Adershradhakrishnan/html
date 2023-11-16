@@ -130,6 +130,15 @@
   margin-top: 10px;
  }
 
+ .cat{
+  display: flex;
+  margin-top: 90px;
+  margin-left: 100px;
+ }
+ .dog{
+  text-align: center;
+ }
+
  
  
 
