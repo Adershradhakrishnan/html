@@ -85,10 +85,18 @@ food = "rice";//initialize
  -cannot be updated later
  -declaration and initialization must be done in single line
  */
-
+{
 const place = "new york";
 console.log("place: ",place);
 console.log("window.place: ",place);
+// const place; //cannot redeclare, gives error
+
+// place = "mumbai"; //not possible ,Assignment to constant variable
+
+// const country; //Missing initializer in const declaration
+
+}
+ // console.log("place from outside the block: ",place); //Gives error (place is not defined)
 
 
 
