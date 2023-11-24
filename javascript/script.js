@@ -98,5 +98,58 @@ console.log("window.place: ",place);
 }
  // console.log("place from outside the block: ",place); //Gives error (place is not defined)
 
+ {
+    let str = " Hello World "
+     
+    let length = str.length;
+    console.log("Length: ",length);
+
+    let toUpperCase = str.toUpperCase();
+    console.log("toUpperCase: ",toUpperCase);
+
+    let toLowerCase = str.toLowerCase();
+    console.log("toLowerCase: ",toLowerCase);
+
+    let length1 = str.toUpperCase().toLowerCase().toUpperCase().length;
+    console.log("Length1: ",length1);
+
+    let trimmedString = str.trim();
+    console.log("trimmedString: ",trimmedString);
+    let trimmedStringLength = trimmedString.length;
+    console.log("trimmedStringLength: ",trimmedStringLength);
+
+    let leftTrimmedString = str.trimStart();
+    let leftTrimmedStringLength = leftTrimmedString.length;
+    console.log("leftTrimmedString: ",leftTrimmedString);
+    console.log("leftTrimmedStringLength: ",leftTrimmedStringLength);
+
+    let rightTrimmedString = str.trimEnd();
+    let rightTrimmedStringLength = rightTrimmedString.length;
+    console.log("rightTrimmedString: ",rightTrimmedString);
+    console.log("rightTrimmedStringLength: ",rightTrimmedStringLength);
+
+    let subString = str.substring(0,3);
+    console.log("subString: ",subString);
+
+    let replacedString = str.replace("Hello","Hai");
+    console.log("replacedString: ",replacedString);
+
+    let isStartsWith = str.startsWith("Hello");
+    console.log("isStartsWith: ",isStartsWith);
+
+    let isEndsWith = str.endsWith("World");
+    console.log("isEndsWith: ",isEndsWith);
+
+    let splitString = str.split(','); //Converts string to array
+    console.log("splitString: ",splitString);
+
+    let joinedArray = splitString.join(' '); //converts array to string
+    console.log("joinedArray: ",joinedArray);
+     
+    let concatString = str.concat();
+    console.log("concatString: ",concatString);
+
+} 
+
 
 
