@@ -151,5 +151,90 @@ console.log("window.place: ",place);
 
 } 
 
+{
+    let num = 10;
+    let arr = [10,20,30,40,50];
+
+    let myArr = [10,"hello",true,false,undefined,null,[0,'a',true]];
+    console.log("arrLength: ",myArr.length);
+
+    console.log("arr[2]: ",arr[2]);
+
+    console.log("Index of 30: ",arr.indexOf(30));
+
+    arr.push("End");
+    console.log("push: ",arr); //adds an element to the end of an array
+
+    arr.unshift("start");
+    console.log("Unshift: ",arr); //adds an element to the start of an array
+
+    arr.pop();
+    console.log("Pop: ",arr); //removes last element from the array
+
+    arr.shift();
+    console.log("Shift: ",arr); //removes first element from the array
+
+    arr.splice(1,2);
+    console.log("Splice: ",arr); //arr.splice(startIndex,number of elements to be spliced)
+
+    arr.splice(2,0,45);
+    console.log("Splice: ",arr); //adds 45 to the 2nd index of the array
+
+    arr[0] = 100;
+    console.log("Splice: ",arr); //reassigns elements in 0th index of the array
+
+
+
+
+
+}
+
+{
+    //objects
+
+    let obj = {
+        firstName: "john",
+        lastName: "Doe",
+        age: 40,
+        canadian: false,
+        marks :[50,70,100],
+    
+            
+     }
+    console.log("obj: ",obj);
+
+
+    console.log("First name: ",obj.firstName);
+    console.log("Canadian: ",obj.canadian);
+
+    obj.firstName = "jane";
+    console.log("obj: ",obj);
+
+    obj.email = "jane12@gamil.com";
+    console.log("obj: ",obj);
+
+    //JSON String
+
+    let json_str = JSON.stringify(obj); //converts javascript objects to json string
+
+    console.log("json_str: ",json_str);
+    //json string format
+
+    let json_str_format = `{
+        "firstName": "john",
+        "lastName": "Doe",
+        "age": 40,
+        "canadian": false,
+        "marks" :[50,70,100],
+    
+            
+     }` ;
+
+     let json_to_obj = JSON.parse(json_str); //converts json string to javascript
+     console.log("json_to_obj:",json_to_obj);
+
+
+}
+
 
 
