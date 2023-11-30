@@ -218,6 +218,9 @@ console.log("window.place: ",place);
     let json_str = JSON.stringify(obj); //converts javascript objects to json string
 
     console.log("json_str: ",json_str);
+
+    json_str.firstName //not possible since it is a string 
+    
     //json string format
 
     let json_str_format = `{
