@@ -90,3 +90,111 @@
     }
 
  }
+
+ {
+    //Loops
+
+    //for
+    //while
+    //do-while
+
+    for(let i=0; i<10; i++) {
+        console.log("hello world");
+
+    }
+
+    let i = 0;
+    while(i < 10) {
+        console.log("hai");
+        i++;
+
+    }
+
+    let j=11;
+    do{
+        console.log("welcome");
+        j++;
+    } while(j<10)
+
+    for(let i=1; i<10; i++) {
+        if(i == 3) {
+            continue;
+        }
+
+        if(i == 7) {
+            break;
+        }
+        console.log(i);
+    }
+
+    //sum
+    
+    let sum = 0;
+    for(let i=0; i<=10; i++) {
+        sum = sum + i;
+    }
+    console.log("sum: ",sum);
+
+    //product
+
+    let product = 1;
+    for(let i=1; i<=10; i++) {
+        product = product * i;
+    }
+    console.log("product: ",product);
+
+    let k =0;
+    while(k<=10) {
+        sum = sum + k;
+        k++;
+    }
+    console.log("sum: ",sum);
+
+    //factorial
+
+    let fact = 1;
+    let num  = 5;
+
+    for(let i=num; i>0; i--) {
+        //i=5 -> fact = fact * i -> fact = 1*5 =5
+        //..
+        //...
+        //i=1 -> fact = fact *i -> fact = 120*1 =120
+        fact = fact * i;
+    }
+    console.log("Factorial: ",fact);
+
+    //Fibanocci series
+
+    console.log("Fibanocci series");
+    let sum1 = 0;
+    let limit = 10;
+    let a = 0;
+    let b = 0;
+    let l = 0;
+
+    while(l <= limit) {
+
+        sum1 = sum1 + a;
+        console.log(sum1);
+        a = b;
+        b = sum1;
+        l++;
+    }
+
+    //even number sum
+
+    console.log("sum");
+    sum1 = 0;
+    sum2 =0;
+    for (let i=0; i<=50; i++) {
+        if(i%2==0)
+    }
+
+
+
+    
+        
+    }
+
+ 
