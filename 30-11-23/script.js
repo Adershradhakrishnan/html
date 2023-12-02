@@ -142,6 +142,7 @@
         product = product * i;
     }
     console.log("product: ",product);
+     //sum
 
     let k =0;
     while(k<=10) {
@@ -202,5 +203,91 @@
 
 
 }
+
+{
+    //array sum of elements
+
+    let arr = [50,30,10,40,20];
+    let sum = 0;
+    for(let i=0;i<arr.length;i++) {
+        
+        sum = sum + arr[i];
+    }
+    console.log("sum: ",sum);
+
+    //average
+
+    let avg = sum/arr.length;
+    console.log("avg: ",avg);
+
+    //find minimum value in an array
+
+    let min = arr[0];
+    for(let i=0;i<arr.length;i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    console.log("Min: ",min);
+
+    //find maximum value in an array
+
+    let max = arr[0];
+    for(let i=0;i<arr.length;i++) {
+        if(arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    console.log("Max: ",max);
+}
+
+{
+    //change negative number in an array to positive
+
+    let arr = [10,-23,30,-34,54];
+    for(let i=0;i<arr.length;i++) {
+
+        if(arr[i] < 0) {
+            arr[i] = arr[i]* -1;
+        }
+    }
+    console.log("arr: ",arr);
+
+    //program to reverse a string
+
+    let str = "Hello";
+    let reverse = '';
+
+    for(let i=str.length-1; i>=0; i--) {
+
+        reverse = reverse + str[i];
+    }
+    console.log("Reversed string: ",reverse);
+
+
+}
+
+{
+
+    let letterArr = ['q','S','a','B'];
+    let upper = [];
+    let lower = [];
+     for(let i=0;i<letterArr.length;i++) {
+        upper[i] = letterArr[i].toUpperCase;
+
+     }
+     console.log("upper: ",upper);
+}
+
+
+    
+
+
+
+   
+
+    
+
+
 
  
