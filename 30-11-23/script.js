@@ -164,13 +164,13 @@
     }
     console.log("Factorial: ",fact);
 
-    //Fibanocci series
+    //Fibanocci series (0 1 1 2 3 5 8 .....)
 
     console.log("Fibanocci series");
     let sum1 = 0;
     let limit = 10;
     let a = 0;
-    let b = 0;
+    let b = 1;
     let l = 0;
 
     while(l <= limit) {
@@ -182,19 +182,25 @@
         l++;
     }
 
-    //even number sum
+    //even and odd number sum
 
     console.log("sum");
     sum1 = 0;
-    sum2 =0;
+    sum2 = 0;
     for (let i=0; i<=50; i++) {
-        if(i%2==0)
-    }
+        if(i%2==0) {
+             sum1=sum1+i;
+        }
 
-
-
-    
+        if(i%2==1) {
+            sum2=sum2+i;
+        } 
         
     }
+    console.log(sum1);
+    console.log(sum2);
+
+
+}
 
  
