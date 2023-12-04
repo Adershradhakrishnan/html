@@ -318,3 +318,194 @@
     console.log(string);
 
 }
+
+{
+    //functions
+
+    //function definition
+
+    function printHello() {
+        console.log("Helloworld");
+        console.log("Hai");
+    }
+
+    printHello(); //function call
+
+    //Named function
+
+    function getAge() {
+        return 12;
+        console.log("not executable");
+    }
+     let age = getAge();
+     console.log("getAge: ",age);
+
+     //Anoynmous function
+
+     let getName = function() {
+        console.log("get named function called");
+        return "john";
+     }
+
+      let name = getName();
+      console.log("Name: ",name);
+
+      //Arrow function
+
+      let getMarks = () =>{
+        console.log("arrow function called");
+        return 70;
+      }
+       let mark = getMarks();
+       console.log("Mark: ",mark);
+
+
+       //function with parameter
+
+       function greeting(message,message1) {
+        console.log("Message: ",message);
+        console.log("Message1: ",message1);
+
+       }
+       greeting("hello","hai"); //argument
+
+       function sum() {
+
+        //sum
+        let sum =0;
+
+    let k =0;
+    while(k<=10) {
+        sum = sum + k;
+        k++;
+    }
+    console.log("sum: ",sum);
+
+       }
+       sum();
+
+
+       function factorial(num) {
+
+         //factorial
+
+    let fact = 1;
+    
+
+    for(let i=num; i>0; i--) {
+        //i=5 -> fact = fact * i -> fact = 1*5 =5
+        //..
+        //...
+        //i=1 -> fact = fact *i -> fact = 120*1 =120
+        fact = fact * i;
+    }
+    console.log("Factorial: ",fact);
+
+       }
+       factorial(6);
+
+
+       function fibanocci(num) {
+          //Fibanocci series (0 1 1 2 3 5 8 .....)
+
+    console.log("Fibanocci series");
+    let sum1 = 0;
+    
+    let a = 0;
+    let b = 1;
+    let l = 0;
+
+    while(l <= num) {
+
+        sum1 = sum1 + a;
+        console.log(sum1);
+        a = b;
+        b = sum1;
+        l++;
+    }
+
+       }
+       fibanocci(20);
+
+       function evenoddsum(num){
+
+
+    //even and odd number sum
+
+    console.log("sum");
+    sum1 = 0;
+    sum2 = 0;
+    for (let i=0; i<=num; i++) {
+        if(i%2==0) {
+             sum1=sum1+i;
+        }
+
+        if(i%2==1) {
+            sum2=sum2+i;
+        } 
+        
+    }
+    console.log(sum1);
+    console.log(sum2);
+
+       }
+       evenoddsum(5);
+
+       function arraysum(arr) {
+
+         //array sum of elements
+
+    
+    let sum = 0;
+    for(let i=0;i<arr.length;i++) {
+        
+        sum = sum + arr[i];
+    }
+    console.log("sum: ",sum);
+
+       }
+    
+        let arr = [50,30,10,40,20];
+       arraysum(arr);
+
+       function arrayavg(arr) {
+        
+        let sum = 0;
+        for(let i=0;i<arr.length;i++) {
+            
+            sum = sum + arr[i];
+        }
+        console.log("sum: ",sum);
+    
+        //average
+    
+        let avg = sum/arr.length;
+        console.log("avg: ",avg);
+    
+       }
+       let arr1 = [50,30,10,40,20];
+       arrayavg(arr);
+
+       //program to count vowels in a string
+
+
+       function isVowel(){
+        let str = "hai welcome";
+        function countVowels(str){
+        let count = 0;
+        for(let i=0;i<str.length;i++);
+
+        if (isVowel(str[i])) {
+            ++count;
+        }
+        }
+        console.log("Str: ",str);
+    }
+
+       
+    
+        
+       
+
+
+    }
