@@ -268,26 +268,53 @@
 }
 
 {
+    //letters in an array changes to upper an lower cases
 
-    let letterArr = ['q','S','a','B'];
-    let upper = [];
-    let lower = [];
-     for(let i=0;i<letterArr.length;i++) {
-        upper[i] = letterArr[i].toUpperCase;
+    let letterarray=['q','S','a','B'];
+    let upperarray=[];
+    let lowerarray=[];
+     for(let i=0;i<letterarray.length;i++) {
+        upperarray[i]=letterarray[i].toUpperCase();
+        lowerarray[i]=letterarray[i].toLowerCase();
 
      }
-     console.log("upper: ",upper);
+     console.log("uppercase array: ",upperarray);
+     console.log("lowercase array: ",lowerarray);
 }
 
+{
 
-    
+   //multiplication table using nested loops
+   for(let i=1; i<=10; i++) {
+      //i=1
+      //i=2
+    console.log('\n');
 
+    for(j=1; j<=10; j++) {
+        //i=1
+        //          i*j
+        //j=1 ->1*1
+        //j=2 ->1*2
+        //j=3 ->1*3
 
+        //i=2
+        //         i*j
+        //j=1 ->2*1
+        //j=2 ->2*2
+        console.log(`${i} * ${j} = ${i*j}`)
+    }
+}
+   //program to print star pattern using nested for loops
 
-   
+   let string = '';
+   //string = '*\n**\n***\n'
+   for(let i=1;i<=10;i++) {
+    for(let j=1;j<=i;j++) {
+        string = string + '*';
+    }
+     string = string + '\n';
+   }
 
-    
+    console.log(string);
 
-
-
- 
+}
