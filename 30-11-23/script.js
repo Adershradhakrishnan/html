@@ -489,12 +489,15 @@
        //program to count vowels in a string
 
 
+        function countvowel() {
         
-        let str = "hai welcome";
         for(let i=0;i<str.length;i++) {
             if (str[i]=='a' ||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u')
             console.log(str[i]);
         }
+    }
+        let str = "hai welcome";
+        countvowel(str);
         
     }
 
@@ -504,15 +507,119 @@
         let arr1=[];
         for(let i=0;i<=arr.length;i++){
             for(let j=i+1;j<=arr.length;j++){
-                if(arr[i]===arr[j]){
+                if(arr[i]==arr[j]){
                     arr1[i]=arr[i];
                 }
             }
         }
         console.log(arr1);
     }
-    let arr=[1,6,1,2,5,6,];
+    let arr=[1,6,1,4,5,6];
     arraysame(arr);
+}
+
+{
+    console.log("\n\n\n");
+
+     //update function
+
+     function update(a) {
+        a = "New value";
+        console.log("From update function,a: ",a)
+     }
+
+     function updateArr(arr) {
+        arr[0] = "New value";
+     }
+
+     function updateObj(obj) {
+        obj.name = "jane";
+     }
+
+     let a = 10;
+     let arr = [1,2,3];
+     let obj = {name : "john", age : 30};
+
+     //call by value
+
+     console.log("a before: ",a);
+     update(a);
+     console.log("a after: ",a);
+
+     //call by reference
+
+     console.log("arr before: ",arr);
+     updateArr(arr);
+     console.log("arr after: ",arr);
+
+     //call by reference
+
+     console.log("obj before: ",obj);
+     updateObj(obj);
+     console.log("obj after: ",obj);
+
+
+     //closure
+     //A function along with its environment
+
+     function outerFunction() {
+        let greeting = "Hai! from outer function";
+
+        function innerFunction() {
+        function innerFunction1(){
+            console.log(greeting);
+        }
+         return innerFunction1;
+     }
+         return innerFunction;
+     }
+
+     let result = outerFunction(); 
+        console.log("result: ",result);
+
+    let result1 = result();
+    console.log("result1: ",result1);
+        result1();
+
+        //innerFunction1(); //gives error
+
+   // let innerFun = function innerFunction() {
+      //  console.log(greeting);
+   // };
+     
+  //  console.log("innerFun: ",innerFun);
+
+    //innerFun();
+
+    //innerFun();
+
+    //methods of DOM
+
+    let btn = document.getElementById('btn');
+    console.log("btn: ",btn);
+    console.log("Button content: ",btn.textContent); //textContent or innerHTML
+
+    let container = document.getElementsByClassName('container');
+    console.log("container: ",container);
+
+    console.log("container1: ",container[0]);
+    console.log("container1 content: ",container[0].textContent);
+    console.log("container2: ",container[1]);
+    console.log("container2 content: ",container[1].textContent);
+    console.log("container3: ",container[2]);
+    console.log("container3 content: ",container[2].textContent);
+
+    let para = document.getElementsByTagName('p');
+    console.log("para: ",para);
+
+    console.log("paragraph1: ",para[0]);
+    console.log("paragraph1 content: ",para[0].textContent);
+
+
+
+
+     
+
 }
         
         
