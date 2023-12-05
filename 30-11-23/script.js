@@ -489,18 +489,34 @@
        //program to count vowels in a string
 
 
-       function isVowel(){
+        
         let str = "hai welcome";
-        function countVowels(str){
-        let count = 0;
-        for(let i=0;i<str.length;i++);
-
-        if (isVowel(str[i])) {
-            ++count;
+        for(let i=0;i<str.length;i++) {
+            if (str[i]=='a' ||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u')
+            console.log(str[i]);
         }
-        }
-        console.log("Str: ",str);
+        
     }
+
+    {
+        function arraysame(arr){
+        
+        let arr1=[];
+        for(let i=0;i<=arr.length;i++){
+            for(let j=i+1;j<=arr.length;j++){
+                if(arr[i]===arr[j]){
+                    arr1[i]=arr[i];
+                }
+            }
+        }
+        console.log(arr1);
+    }
+    let arr=[1,6,1,2,5,6,];
+    arraysame(arr);
+}
+        
+        
+    
 
        
     
@@ -508,4 +524,4 @@
        
 
 
-    }
+    
