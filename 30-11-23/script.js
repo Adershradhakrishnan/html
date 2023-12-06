@@ -614,13 +614,21 @@
 
     console.log("paragraph1: ",para[0]);
     console.log("paragraph1 content: ",para[0].textContent);
+    console.log("paragraph2: ",para[1]);
+    console.log("paragraph2 content: ",para[1].textContent);
+    console.log("paragraph3: ",para[2]);
+    console.log("paragraph3 content: ",para[2].textContent);
+
+    let listItem = document.querySelector('.container #box ul li');
+    console.log("listItem: ",listItem);
+    console.log("listItem content: ",listItem.textContent);
+    console.log("listItem innerHTML: ",listItem.innerHTML);
+
+    let btn1 = document.getElementById('btn1');
+    btn1.innerHTML = "click me";
 
 
-
-
-     
-
-}
+ }
         
         
     
