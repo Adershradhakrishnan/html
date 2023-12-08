@@ -629,6 +629,131 @@
 
 
  }
+
+ {
+    console.log("\n\n\n");
+    //Event listners
+
+    let btn = document.getElementById('btn');
+    console.log("btn: ",btn);
+
+    let inp = document.getElementById('inp');
+    console.log("inp: ",inp);
+
+    btn.addEventListener('click', function (){ 
+        alert("Button Clicked");
+    });
+
+    btn.addEventListener('mouseover', function (){
+        console.log("mouse over event fired...");
+    });
+
+    btn.addEventListener('mouseout', function() {
+        console.log("mouse out event fired..");
+    });
+
+    btn.addEventListener('mousedown', function() {
+        console.log("mouse down event fired..");
+    });
+
+    btn.addEventListener('mouseup', function() {
+        console.log("mouse up event fired..");
+    });
+
+    btn.addEventListener('mousemove', function() {
+        console.log("mouse move event fired..");
+    });
+
+    inp.addEventListener('keydown', function() {
+        console.log("key down event fired...");
+    });
+
+    inp.addEventListener('keyup', function() {
+        console.log("key up event fired..");
+    });
+
+    console.log("\n\n\n");
+
+    //Math functions
+
+    console.log("Math.sqrt(4): ",Math.sqrt(16)); //4
+    console.log("Math.round(10.5): ",Math.round(10.5)); //11
+    console.log("Math.round(10.4): ",Math.round(10.4)); //10
+    console.log("Math.ceil(10.1): ",Math.ceil(10.1));  //11
+    console.log("Math.ceil(10.9): ",Math.ceil(10.9));  //11
+    console.log("Math.floor(10.1): ",Math.floor(10.1)); //10
+    console.log("Math.floor(10.9): ",Math.floor(10.9)); //10
+    console.log("Math.abs(2): ",Math.abs(2));  //2
+    console.log("Math.abs(-2): ",Math.abs(-2));  //2
+    console.log("Math.PI: ",Math.PI);  //3.14
+    console.log("Math.max(10,20,30): ",Math.max(10,20,30)); //30
+    console.log("Math.min(10,20,30): ",Math.min(10,20,30)); //10
+    console.log("Math.pow(2,3): ",Math.pow(2,3)); //8
+
+    //Timer
+
+     setTimeout( function() {
+        //alert("SetTimeout");
+        console.log("From SetTimeout...");
+     },5000) ;
+
+     setInterval( function() {
+        console.log("From SetInterval...");
+     },3000);
+
+     //call back function
+
+     function printHello(callback) {
+        console.log("callback: ",callback);
+        callback();
+        console.log("Hello...");
+
+     }
+
+     let callback = function() {
+        console.log("callback function...");
+     };
+      printHello(callback);
+
+}
+
+{
+    //program to print current time
+    function putZero(value) {
+        return value<10?"0"+value:value;
+
+    }
+
+    function show() {
+        var time = getElementById('time');
+        console.log("time: ",time);
+        var dt = new Date();
+        console.log("Date: ",dt);
+        var hours = dt.getHours();
+        var minutes = dt.getMinutes();
+        var seconds = dt.getSeconds();
+
+        var ampm = hours>12?"pm":"am";
+        time.innerHTML = putzero(hours%12) +":" +  putzero(minutes) +":" + putzero(seconds) + ampm;
+
+        setTimeout(function () {
+            show();
+
+        },1000);
+
+        }
+        show();
+
+
+    }
+
+
+
+ 
+
+ 
+
+ 
         
         
     
