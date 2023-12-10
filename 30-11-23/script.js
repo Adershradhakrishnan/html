@@ -725,7 +725,7 @@
     }
 
     function show() {
-        var time = getElementById('time');
+        var time = document.getElementById('time');
         console.log("time: ",time);
         var dt = new Date();
         console.log("Date: ",dt);
@@ -734,7 +734,7 @@
         var seconds = dt.getSeconds();
 
         var ampm = hours>12?"pm":"am";
-        time.innerHTML = putzero(hours%12) +":" +  putzero(minutes) +":" + putzero(seconds) + ampm;
+        time.innerHTML = putZero(hours%12) +":" +  putZero(minutes) +":" + putZero(seconds) + ampm;
 
         setTimeout(function () {
             show();
