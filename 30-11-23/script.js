@@ -935,3 +935,48 @@
 
 }
 
+{
+     let arr = [1,2,3,4,5,6,7,8];
+    //find sum of squares of a numerical array using forEach
+
+    arr.forEach((element) => {
+        let sum_sq = element*element;
+        console.log("sum_sq: ",sum_sq);
+    });
+
+    //find the first even number of an array using find
+
+    let firstEven = arr.find((element) => {
+        return element%2==0;
+    });
+    console.log("firstEven: ",firstEven);
+
+    //filter all the even numbers in an array using filter
+
+    let even_filter = arr.filter((element) => {
+        return element%2==0;
+    });
+    console.log("even_filter: ",even_filter);
+
+    //double each elements in an array using map
+
+    let mapdouble = arr.map((element) => {
+        return element*2;
+    });
+    console.log("mapdouble: ",mapdouble);
+
+    //write a function 'productpossive that takes an array of numbers as input
+    //and uses the 'reduce' method to calculate the product of all positive numbers in that array
+
+    let productpositive = arr.reduce((total,element) => {
+        if(element>0) {
+            return total*element;
+        }
+        return total;
+    },1);
+    console.log("productpositive: ",productpositive);
+
+
+
+}
+
