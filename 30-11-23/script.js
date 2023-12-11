@@ -692,14 +692,14 @@
 
     //Timer
 
-     setTimeout( function() {
-        //alert("SetTimeout");
-        console.log("From SetTimeout...");
-     },5000) ;
+    //  setTimeout( function() {
+    //     //alert("SetTimeout");
+    //     console.log("From SetTimeout...");
+    //  },5000) ;
 
-     setInterval( function() {
-        console.log("From SetInterval...");
-     },3000);
+    //  setInterval( function() {
+    //     console.log("From SetInterval...");
+    //  },3000);
 
      //call back function
 
@@ -736,32 +736,202 @@
         var ampm = hours>12?"pm":"am";
         time.innerHTML = putZero(hours%12) +":" +  putZero(minutes) +":" + putZero(seconds) + ampm;
 
-        setTimeout(function () {
-            show();
+        // setTimeout(function () {
+        //     show();
 
-        },1000);
+        // },1000);
 
-        }
-        show();
+        // }
+        // show();
 
 
     }
 
+    {
+        //spread operator
 
+        let arr = [1,2,3,4,5];
+        console.log("arr: ",arr);
 
- 
+        let arr_cont = [...arr,6];
+        console.log("arr_cont: ",arr_cont);
 
- 
+        let obj = {
+            firstName : "mike",
+            lastName : "henry",
 
- 
+        }
+        console.log("obj: ",obj);
+
+        let obj_cont  = {
+            ...obj,
+            age:30,
+
+        }
+        console.log("obj_cont: ",obj_cont);
+    }
+
+    {
+        //destructuring
+
+        let arr = [1,2,3,4,5];
+        console.log("arr: ",arr);
+
+        let [a,b,c,d,e] = arr;
         
+        console.log("a: ",a);
+        console.log("b: ",b);
+        console.log("c: ",c);
+        console.log("d: ",d);
+        console.log("e: ",e);
+
+        let obj = {
+            firstName : "mike",
+            lastName : "henry",
+
+        }
+        console.log("obj: ",obj);
+
+        let {firstName,lastName} = obj;
+
+        console.log("firstName: ",firstName);
+        console.log("lastName: ",lastName);
+    }
+
+    {
+        //Nested destructuring
+
+        let matrix = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9],
+        ];
+        console.log("matrix: ",matrix);
+
+        let [row1,row2,row3] = matrix;
+
+        console.log("row1: ",row1);
+        console.log("row2: ",row2);
+        console.log("row3: ",row3);
+
+        let [a,b,c] = row1;
+        let [d,e,f] = row2;
+        let [g,h,i] = row3;
+
+        console.log("a: ",a);
+        console.log("b: ",b);
+        console.log("c: ",c);
+        console.log("d: ",d);
+        console.log("e: ",e);
+        console.log("f: ",f);
+        console.log("g: ",g);
+        console.log("h: ",h);
+        console.log("i: ",i);
+
+        let obj = {
+            firstName : "john",
+            lastName : "doe",
+            age : 30,
+            address : {
+                street : "mystreet",
+                city : "mycity",
+                pincode :123456,
+            },
+        }
+
+        console.log("obj: ",obj);
+
+        let {firstName,lastName,age,address : {street,city,pincode}} = obj;
+
+        console.log("firstName: ",firstName);
+        console.log("lastName: ",lastName);
+        console.log("age: ",age);
+        console.log("street: ",street);
+        console.log("city: ",city);
+        console.log("pincode: ",pincode);
+
+
+
         
-    
+    }
+     {
+        let arr1 = [1,2,3];
+        console.log("arr1: ",arr1);
 
-       
-    
-        
-       
+        let arr2 = [4,5,6];
+        console.log("arr2: ",arr2);
+
+        let arr3 = [...arr1,...arr2,8,9];
+        console.log("arr3: ",arr3);
+     }  
+
+     let obj1 = {
+        firstName : "john",
+     }
+     console.log("obj1:",obj1);
+
+     let obj2 = {
+        lastName : "david",
+     }
+     console.log("obj2: ",obj2);
+
+     let obj3 = {
+        ...obj1,
+        ...obj2,
+        age :30,
+     }
+     console.log("obj3: ",obj3);
 
 
-    
+
+
+
+}
+
+{
+    //Array methods
+
+    let arr = [
+        {name : "amal", mark : 49, place : "malapuram"},
+        {name : "anil", mark : 48, place : "ernakulam"},
+        {name : "avin", mark:50, place: "alapuzha"},
+        {name: "akhil", mark: 49, place: "kollam"},
+    ];
+
+    //for each
+
+    arr.forEach((element,index) => {
+        console.log("index: ",index);
+        console.log("element: ",element.name);
+    })
+
+    //Find
+
+    let findResult = arr.find((element) => {
+        return element.name == "anil";
+    });
+    console.log("findResult: ",findResult);
+
+    //filter
+     let filterResult = arr.filter((element,index) => {
+        return element.mark == 49;
+     });
+     console.log("filterResult: ",filterResult);
+
+     //map
+
+     let mapResult = arr.map((element) => {
+        return element.name;
+     });
+     console.log("mapResult: ",mapResult);
+
+     //reduce
+
+     let totalMarks = arr.reduce((total,element) => {
+        return total + element.mark;
+     },0);
+     console.log("totalMarks: ",totalMarks);
+
+
+}
+
