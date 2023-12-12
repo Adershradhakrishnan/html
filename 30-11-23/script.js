@@ -968,15 +968,150 @@
     //write a function 'productpossive that takes an array of numbers as input
     //and uses the 'reduce' method to calculate the product of all positive numbers in that array
 
-    let productpositive = arr.reduce((total,element) => {
-        if(element>0) {
-            return total*element;
+    
+
+}
+
+{
+
+    // let person = {
+    //     firstName : "doe",
+    //     lastName : "john",
+    //     age : 30,
+    //     getAge : function () {
+    //         console.log(`Age of ${this.firstName} is ${this.age}`);
+    //     }
+    // }
+    // person.getAge();
+    // console.log("this: ",this);
+
+    // function greet(message1,message2) {
+    //     console.log(`${message1} and ${message2}  ${this.firstName}`);
+    // }
+
+    // //greet("Hello");
+    // //greet.call(person,"Hello","Hai");
+    // //greet.apply(person,["Hello","Hai"]);
+
+    // let bindedResult = greet.bind(person,"Hello","Hai");
+    // console.log(bindedResult());
+
+    //constructor function
+
+    // function person(name,age,mark) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.mark = mark;
+
+    //     this.greeting = function() {
+    //         console.log(`Hai ${this.name},your mark is ${this.mark}`);
+    //     }
+    // }
+
+    // let person1 = new person("Harry",17,60);
+    // console.log("person1: ",person1);
+    // person1.greeting();
+
+    // let person2 = new person("sam",17,60);
+    // console.log("person2: ",person2);
+    // person2.greeting();
+
+    // let person3 = new person("don",17,60);
+    // console.log("person3: ",person3);
+    // person3.greeting();
+
+    // person.prototype.getAgeAndMark = function() {
+    //     console.log(`Hello ${this.name},your age is ${this.age},and your mark is ${this.mark}`);
+    // }
+    // person1.getAgeAndMark();
+
+
+    //classes
+
+    class person {
+        name;
+        age;
+        mark;
+
+        constructor(name,age,mark) {
+            this.name = name;
+            this.age = age;
+            this.mark = mark;
         }
-        return total;
-    },1);
-    console.log("productpositive: ",productpositive);
+        greeting() {
+            console.log(`Hai ${this.name}`);
+        }
+    }
+
+    let person1 = new person("don",17,45);
+    console.log("person1: ",person1);
+    person1.greeting();
+
+    let person2 = new person("sam",17,45);
+    console.log("person2: ",person2);
+    person2.greeting();
+
+    let person3 = new person("alex",17,45);
+    console.log("person3: ",person3);
+    person3.greeting();
+
+    person.prototype.getAgeAndMark = function() {
+        console.log(`Hello ${this.name},your age is ${this.age},and your mark is ${this.mark}`);
+
+    }
+
+    person1.getAgeAndMark();
+    person2.getAgeAndMark();
+    person3.getAgeAndMark();
+
+    class Animal {
+        name;
+
+        constructor(name) {
+            this.name = name;
+        }
+        printName() {
+            console.log(`Animal is ${this.name}`);
+        }
+    }
+
+    let myAnimal = new Animal("monkey");
+    console.log("myAnimal: ",myAnimal);
+
+    myAnimal.printName();
+
+    let myAnimal1 = new Animal("lion");
+    console.log("myAnimal1: ",myAnimal1);
+
+    myAnimal1.printName();
+
+    //inheritence
+
+    class Dog extends Animal {
+        color;
+        constructor(name,color) {
+            super(name); // calls parent constructor
+            this.color = color;
+        }
+        pritcolor() {
+            console.log(`color of ${this.name} is ${this.color}`);
+        }
+    }
+     let myDog = new Dog("arjun" ,"black");
+     console.log("myDog: ",myDog);
+     myDog.printName();
+     myDog.pritcolor();
 
 
 
+
+
+
+
+
+
+    
+    
+    
 }
 
