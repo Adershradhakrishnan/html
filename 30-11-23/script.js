@@ -967,7 +967,15 @@
 
     //write a function 'productpossive that takes an array of numbers as input
     //and uses the 'reduce' method to calculate the product of all positive numbers in that array
-
+    
+    let arr1 = [7,5,-9,-8,1];
+    let productpositive=arr1.reduce((total,element)=> {
+        if(element>0){
+            return total*element;
+        }
+        return total;
+    },1);
+    console.log("productpositive: ",productpositive);
     
 
 }
@@ -1102,16 +1110,45 @@
      myDog.printName();
      myDog.pritcolor();
 
+}
 
+{
+    class Vehicle {
+        name;
+        constructor(name) {
+            this.name = name;
+        }
+        printName() {
+            console.log(`vehicle is ${this.name}`);
+        }
+    }
 
+    let myVehicle = new Vehicle("car");
+    console.log("myVehicle: ",myVehicle);
 
+    myVehicle.printName();
 
+    let myVehicle1 = new Vehicle("bike");
+    console.log("myVehicle1: ",myVehicle1);
 
+    myVehicle1.printName();
 
+    //inheritence
 
+    class Bus extends Vehicle {
+        wheel;
+        constructor(name,wheel) {
+            super(name);
+            this.wheel = wheel;
+        }
+        printWheel(){
+            console.log(`wheel of ${this.name} is ${this.wheel}`);
+        }
+    }
 
-    
-    
-    
+    let myBus = new Bus("komban","6wheel");
+    console.log("myBus: ",myBus);
+    myBus.printName();
+    myBus.printWheel();
 }
 
