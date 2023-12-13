@@ -1152,3 +1152,60 @@
     myBus.printWheel();
 }
 
+{
+    class MyButton {
+        button;
+
+        constructor(content) {
+            this.button = document.createElement('button');
+            this.button.innerHTML = content;
+            document.body.appendChild(this.button);
+        }
+        set width(width) {
+            this.button.style.width = width + "px";
+        }
+
+        set height(height) {
+            this.button.style.height = height + "px";
+        }
+
+        get width() {
+            this.button.style.width;
+        }
+
+        get height() {
+            this.button.style.height;
+        }
+
+        onClick(fn) {
+            this.button.onclick = fn;
+        }
+    }
+
+    let mybutton = new MyButton('click here');
+    console.log("MyButton: ",MyButton);
+
+    MyButton.width = 100;
+    MyButton.height = 150;
+
+    console.log("MyButton width: ",MyButton.width);
+    console.log("MyButton height: ",MyButton.height);
+
+    mybutton.onClick(function (){
+        console.log("Button clicked..");
+    });
+
+    class YellowButton extends MyButton {
+        onClick(fn) {
+            this.button.onclick = function(){
+                
+            }
+                
+            }
+        }
+    
+
+
+}
+
+
