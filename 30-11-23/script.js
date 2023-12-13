@@ -1198,11 +1198,25 @@
     class YellowButton extends MyButton {
         onClick(fn) {
             this.button.onclick = function(){
+                fn();
+                this.button.style.background = "yellow";
                 
-            }
+            }.bind(this);
                 
             }
         }
+
+        let MyYellowButton = new YellowButton("Yellow Button");
+
+        MyYellowButton.width = 200;
+        MyYellowButton.height = 200;
+
+        console.log("MyYellowButton width : ",MyYellowButton.width);
+        console.log("MyYellowButton height: ",MyYellowButton.height);
+
+        MyYellowButton.onClick(function () {
+            console.log("Button Clicked...");
+        });
     
 
 
