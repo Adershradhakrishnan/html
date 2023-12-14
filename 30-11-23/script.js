@@ -1215,7 +1215,7 @@
         console.log("MyYellowButton height: ",MyYellowButton.height);
 
         MyYellowButton.onClick(function () {
-            console.log("Button Clicked...");
+            console.log("Button Clicked...");  
         });
     
 
