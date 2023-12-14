@@ -35,6 +35,26 @@
     console.log("readystate: ",xhr.readyState);
     console.log("statuscode:",xhr.status);
 
+    if(xhr.readyState == 4) {
+      
+      if(xhr.status == 200) {
+
+        let response = xhr.response;
+        console.log("response: ",response);
+        console.log("type of response : ",typeof(response));
+
+        let parsed_response = JSON.parse(response);
+        console.log("parsed_response: ",parsed_response);
+        console.log("type of parsed_response: ",typeof(parsed_response));
+
+      }else {
+        console.log("Failed");
+      }
+
+    }else {
+      console.log("State not completed");
+    }
+
     
   }
 
