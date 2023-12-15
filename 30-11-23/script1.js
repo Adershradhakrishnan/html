@@ -1,3 +1,5 @@
+ {
+  
   //synchronous single threaded operation
 
   //first synchronous operation will be done,then after will asynchronous operation will be done 
@@ -21,19 +23,26 @@
 
 
   let xhr = new XMLHttpRequest();
+
+  let btn = document.getElementById('btn');
+  btn.addEventListener('click',() =>{
+    xhr.send();
+  });
   //get
   //post
   //put
   //delete
 
   xhr.open("get",'https://jsonplaceholder.typicode.com/users');
-  xhr.send();
+  
 
   console.log("xhr: ",xhr);
 
   xhr.onreadystatechange = function() {
     console.log("readystate: ",xhr.readyState);
     console.log("statuscode:",xhr.status);
+
+    let content =document.getElementById('content');
 
     if(xhr.readyState == 4) {
       
@@ -47,6 +56,20 @@
         console.log("parsed_response: ",parsed_response);
         console.log("type of parsed_response: ",typeof(parsed_response));
 
+        datas = '';
+
+        for(let i=0; i<parsed_response.length;i++) {
+          datas = datas + `
+          <tr>
+          <td>${parsed_response[i].id}</td>
+          <td>${parsed_response[i].name}</td>
+          <td>${parsed_response[i].username}</td>
+          <td>${parsed_response[i].website}</td>
+          </tr>
+          `
+        }
+         content.innerHTML = datas;
+
       }else {
         console.log("Failed");
       }
@@ -57,5 +80,6 @@
 
     
   }
+}
 
 
