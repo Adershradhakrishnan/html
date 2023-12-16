@@ -40,9 +40,10 @@ xhr.onreadystatechange = function() {
         datas = datas + `
         <tr>
         <td>${parsed_response[i].id}</td>
-        <td>${parsed_response[i].name}</td>
-        <td>${parsed_response[i].username}</td>
+        <td>${parsed_response[i].title}</td>
         <td>${parsed_response[i].price}</td>
+        <td>${parsed_response[i].description}</td>
+        <td><img src="${parsed_response[i].image}" alt="" width="20px" height="30px"></td>
         </tr>
         `
       }
