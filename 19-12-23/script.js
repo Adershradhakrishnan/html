@@ -35,6 +35,72 @@
  const result6 = regexp6.test(str1);
  console.log("result6: ",result6);  //true
 
+ const regexp7 = /^rat/i;
+ const result7 = regexp7.test(str2);
+ console.log("result7: ",result7); //true
+
+ const regexp8 = /fish$/i;
+ const result8 = regexp8.test(str2);
+ console.log("result8: ",result8); //true
+
+ const regexp9 = /^good/im;
+ const result9 = regexp9.test(str4);
+ console.log("result9: ",result9); //false
+
+ const regexp10 = /good/im;
+ const result10 = regexp10.test(str4);
+ console.log("result10: ",result10); //true
+
+ const regexp11 = /fishes?/im;  //word before '?' is optionel for matching
+ const result11 = regexp11.test(str3);
+ console.log("result11: ",result11); //true
+
+ const regexp12 = /fish(es)?/im;  //'()' represents groups
+ const result12 = regexp12.test(str3);
+ console.log("result12: ",result12); //true
+
+ const regexp13 = /fishes*$/i;  //the letter before '*' occur mutiple times in a string
+ const result13 = regexp13.test(str3);
+ console.log("result13: ",result13); //true
+
+ const regexp14 = /fishes+$/i;
+ const result14 = regexp14.test(str3);
+ console.log("result14: ",result14); //false
+
+ const regexp15 = /fish.$/i;
+ const result15 = regexp15.test(str3);
+ console.log("result15: ",result15); //true
+
+ const regexp16 = /fish.*$/i;
+ const result16 = regexp16.test(str3);
+ console.log("result16: ",result16); //true
+
+ {
+    //input validation
+    //A-Z,a-z
+    //0-9
+    //_
+    //starts with chracter
+
+    const regexInp = /a-z
+ }
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
