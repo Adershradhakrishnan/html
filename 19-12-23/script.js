@@ -84,33 +84,148 @@
 
     const regexInp = /^[a-z][a-z0-9]*$/i;
 
-    function checkResult(value) {
-        const result = regexInp.test(value);
+   //  function checkResult(value) {
+   //      const result = regexInp.test(value);
+
+   //    if(result) {
+   //       return '';
+   //    }else {
+   //       return 'Invalid String';
+   //    }
+   //  }
+
+   //  const value = "_J_9ashdjd";
+
+   //  let validation_result = checkResult(value);
+   //  console.log("validation_result: ",validation_result);
+
+   //  function onChange(arg) {
+   //    let validation_result = checkResult(arg.value);
+   //    let label = document.getElementById('error');
+   //    if(validation_result) {
+   //       label.innerHTML = validation_result;
+   //    }else {
+   //       label.innerHTML = validation_result;
+   //    }
+   //  }
+
+
+ }
+
+ const str5 = "Hello";
+
+ const regexp17 = /[kjm]/i; // if there is 'k' 'j' or 'm' there will be true
+ const result17 = regexp17.test(str5);
+ console.log("result17: ",result17); //false
+
+ const regexp18 = /[^kjm]/i;
+ const result18 = regexp18.test(str5); //if there is no kjm in the string it will true
+ console.log("result18: ",result18); //true
+
+ const regexp19 = /[H+]/i;
+ const result19 = regexp19.test(str5); //atleast one 'H' is required
+ console.log("result19: ",result19); //true
+
+ const regexp20 = /O$/i;
+ const result20 = regexp20.test(str5); //string ends with 'O'
+ console.log("result20: ",result20); //true
+
+ const regexp21 = /O?$/i;
+ const result21 = regexp21.test(str5); //'O' in string ending is optionel
+ console.log("result21: ",result21); //true
+
+ const regexp22 = /O+$/i;
+ const result22 = regexp22.test(str5); //atleast one 'O' is required at the string ending
+ console.log("result22: ",result22); //true
+
+ // {}- indicates the number of characters,a{2} means "aa",ie two 'a' is required
+
+ const regexp23 = /L{2}o$/i; //'o' should be exactly after 2L's
+ const result23 = regexp23.test(str5);
+ console.log("result23: ",result23); //true
+
+ const regexp24 = /L{2,4}o$/i; // 'o' should be exactly after 2 to 4 L's
+ const result24 = regexp24.test(str5);
+ console.log("result24: ",result24); //true
+
+ const regexp25 = /HeL{2,4}o$/i; // 'o' should be exactly after between 2 to 4 L's and 'o' is required
+ const result25 = regexp25.test(str5);
+ console.log("result25: ",result25); //true
+
+ const regexp26 = /HeL{2,}o$/i; //2 or more 'L' is required
+ const result26 = regexp26.test(str5);
+ console.log("result26: ",result26); //true
+
+ // \- indicates escape character.used for matching any characters which has special meaning
+
+ const regexp27 = /\d/i; //if there is any digits,it will be true else it will be false
+ const result27 = regexp27.test(str5);
+ console.log("result27: ",result27); //false
+
+ const regexp28 = /\D/i; //if there is any non-digits it will be true,if there is only digits it will be false
+ const result28 = regexp28.test(str5);
+ console.log("result28: ",result28);//true
+
+ //suppose we want to match '.' in a string ,since '.' has a special meaining in regular expressions it will not work at expected and will match everything
+
+ const regexp29 =  /./i; //if there is '.' or anything it will match
+ const result29 = regexp29.test(str5);
+ console.log("result29: ",result29); //true
+
+ //so we can write it as
+
+ const regexp30 = /\./i; //if there is any '.' in the string it match,else it will be false
+ const result30 = regexp30.test(str5);
+ console.log("result30: ",result30);//false
+// '\'(backslash) is used to escape special characters
+
+//Date validation
+//1
+
+const regexpForDate = /^\d{1,2}-d{1,2}-d{4}$/i; //string should start with 1 or 2 digits,then aftr '-' symbol then again 1 or 2 digits,then after '-' symbol
+//ending digits should be 4
+
+const regexpForDate1 = /^([012]?\d|3[01])-([0]\d|[1][012])-(\d{4})$/i;
+
+function checkResult(value) {
+         const result = regexpForDate1.test(value);
 
       if(result) {
          return '';
-      }else {
+       }else {
          return 'Invalid String';
       }
-    }
+     }
 
-    const value = "_J_9ashdjd";
+    const value = "16-12-23";
 
-    let validation_result = checkResult(value);
+     let validation_result = checkResult(value);
     console.log("validation_result: ",validation_result);
 
-    function onChange(arg) {
-      let validation_result = checkResult(arg.value);
+     function onChange(arg) {
+     let validation_result = checkResult(arg.value);
       let label = document.getElementById('error');
       if(validation_result) {
          label.innerHTML = validation_result;
       }else {
-         label.innerHTML = validation_result;
-      }
+          label.innerHTML = validation_result;
+       }
     }
 
 
- }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
