@@ -82,7 +82,34 @@
     //_
     //starts with chracter
 
-    const regexInp = /a-z
+    const regexInp = /^[a-z][a-z0-9]*$/i;
+
+    function checkResult(value) {
+        const result = regexInp.test(value);
+
+      if(result) {
+         return '';
+      }else {
+         return 'Invalid String';
+      }
+    }
+
+    const value = "_J_9ashdjd";
+
+    let validation_result = checkResult(value);
+    console.log("validation_result: ",validation_result);
+
+    function onChange(arg) {
+      let validation_result = checkResult(arg.value);
+      let label = document.getElementById('error');
+      if(validation_result) {
+         label.innerHTML = validation_result;
+      }else {
+         label.innerHTML = validation_result;
+      }
+    }
+
+
  }
 
 
