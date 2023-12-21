@@ -187,30 +187,64 @@ const regexpForDate = /^\d{1,2}-d{1,2}-d{4}$/i; //string should start with 1 or 
 
 const regexpForDate1 = /^([012]?\d|3[01])-([0]\d|[1][012])-(\d{4})$/i;
 
-function checkResult(value) {
-         const result = regexpForDate1.test(value);
+// function checkResult(value) {
+//          const result = regexpForDate1.test(value);
 
-      if(result) {
-         return '';
-       }else {
-         return 'Invalid String';
-      }
-     }
+//       if(result) {
+//          return '';
+//        }else {
+//          return 'Invalid String';
+//       }
+//      }
 
-    const value = "16-12-23";
+//     const value = "16-12-23";
 
-     let validation_result = checkResult(value);
-    console.log("validation_result: ",validation_result);
+//      let validation_result = checkResult(value);
+//     console.log("validation_result: ",validation_result);
 
-     function onChange(arg) {
-     let validation_result = checkResult(arg.value);
-      let label = document.getElementById('error');
-      if(validation_result) {
-         label.innerHTML = validation_result;
-      }else {
-          label.innerHTML = validation_result;
-       }
+//      function onChange(arg) {
+//      let validation_result = checkResult(arg.value);
+//       let label = document.getElementById('error');
+//       if(validation_result) {
+//          label.innerHTML = validation_result;
+//       }else {
+//           label.innerHTML = validation_result;
+//        }
+//     }
+
+    //email validation
+
+    const regexpForEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/i;
+      
+    function checkResult(value) {
+      const result = regexpForEmail.test(value);
+
+   if(result) {
+      return '';
+    }else {
+      return 'Invalid String';
+   }
+  }
+
+ const value = "adershsms@gmail.com";
+
+  let validation_result = checkResult(value);
+ console.log("validation_result: ",validation_result);
+
+  function onChange(arg) {
+  let validation_result = checkResult(arg.value);
+   let label = document.getElementById('error');
+   if(validation_result) {
+      label.innerHTML = validation_result;
+   }else {
+       label.innerHTML = validation_result;
     }
+ }
+
+
+
+
+
 
 
 
