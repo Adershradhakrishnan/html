@@ -54,8 +54,8 @@ const server = http.createServer((req,res) => {
     
       //save to a database(next)
 
-    res.writeHead(200,{'Content-Type' : 'text/plain'});
-    res.end("Form submitted succesfully");
+    // res.writeHead(200,{'Content-Type' : 'text/plain'});
+    // res.end("Form submitted succesfully");
 
 });
 
