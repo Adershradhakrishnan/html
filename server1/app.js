@@ -3,9 +3,16 @@ const url = require('url');
 const port = 3000;
 const fs = require('fs');
 const queryString = require('querystring');
+const {MongoClient}=require('mongodb');
+
+const client = new MongoClient("mongodb://127.0.0.1:27017");
 
 
 const server = http.createServer((req,res) => {
+
+  //access the database and collections
+  const db=client.db("users");
+  const collection=db.collection("users_coll");
 
     console.log("url: ",req.url);
 
@@ -42,7 +49,7 @@ const server = http.createServer((req,res) => {
     });
 
     //process the form data on end of the request
-    req.on('end',()=> {
+    req.on('end',async()=> {
       const formData = queryString.parse(body);
       console.log("formData: ",formData);
 
@@ -50,12 +57,16 @@ const server = http.createServer((req,res) => {
       console.log("name: ",formData.name);
       console.log("email: ",formData.email);
       console.log("password: ",formData.password);
+
+      //save to database
+      collection.insertOne
+
     });
     
       //save to a database(next)
 
-    // res.writeHead(200,{'Content-Type' : 'text/plain'});
-    // res.end("Form submitted succesfully");
+    //res.writeHead(200,{'Content-Type' : 'text/plain'});
+     //res.end("Form submitted succesfully");
 
 });
 
