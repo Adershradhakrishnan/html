@@ -8,7 +8,7 @@ const {MongoClient}=require('mongodb');
 const client = new MongoClient("mongodb://127.0.0.1:27017");
 
 
-const server = http.createServer((req,res) => {
+const server = http.createServer(async(req,res) => {
 
   //access the database and collections
   const db=client.db("users");
@@ -27,14 +27,27 @@ const server = http.createServer((req,res) => {
     if(parsed_url.pathname === '/') {
       res.writeHead(200,{'Content-Type' : 'text/html'});
       res.end(fs.readFileSync('../client/index.html'));
+    }else if(parsed_url.pathname === '/style.css'){
+      res.writeHead(200,{'Content-Type' : 'text/css'});
+      res.end(fs.readFileSync('../client/style.css'));
+    }else if(parsed_url.pathname === '/add_user.html'){
+      res.writeHead(200,{'Content-Type' : 'text/html'});
+      res.end(fs.readFileSync('../client/add_user.html'));
+    }else if(parsed_url.pathname === '/get_user.html'){
+      res.writeHead(200,{'Content-Type' : 'text/html'});
+      res.end(fs.readFileSync('../client/get_user.html'));
+    }else if(parsed_url.pathname === '/script.js') {
+      res.writeHead(200,{'Content-Type' : 'text/javascript'});
+      res.end(fs.readFileSync('../client/script.js'));
     }
+      
 
 
     //handle form submission on post request to/submit
 
     if(req.method === "POST" && parsed_url.pathname === "/submit") {
     console.log("form submitted succesfully..");
-    };
+    
 
 
     let body='';
@@ -58,20 +71,61 @@ const server = http.createServer((req,res) => {
       console.log("email: ",formData.email);
       console.log("password: ",formData.password);
 
-      //save to database
-      collection.insertOne
+      //save to database(next)
+      collection.insertOne(formData)
+        .then((message)=> {
+          console.log("Document saved successfully");
+          console.log("message: ",message);
+        })
+        .catch((error)=>{
+          console.log("Document not inserted");
+          console.log("Database insertion error: ",error);
+        })
+
+        res.writeHead(200,{'Content-Type' : 'text/plain'});
+     res.end("Form submitted succesfully");
+
 
     });
+} 
     
-      //save to a database(next)
+      //handle get request to the user details
 
-    //res.writeHead(200,{'Content-Type' : 'text/plain'});
-     //res.end("Form submitted succesfully");
+      if(req.method === "GET" && parsed_url.pathname === "/getData") {
+        let data = await collection.find().toArray();
+        console.log("data: ",data);
+
+        let json_data = JSON.stringify(data);
+        console.log("json_data: ",json_data);
+
+        res.writeHead(200,{"content-Type" : "text/json"});
+        res.end(json_data);
+      }
+
+    
 
 });
 
-  server.listen(port,()=> {
-    console.log(`Server running at http://127.0.0.1:${port}`)
-  });
+async function connect() {
+
+  await client.connect()
+   .then((message)=> {
+    console.log("database connection established");
+   })
+   .catch((error)=> {
+    console.log("database connection error: ",error);
+   })
+   .finally(()=>{
+
+    server.listen(port,()=> {
+      console.log(`Server running at http://127.0.0.1:${port}`)
+
+   });
+});
+
+  
+  }
+
+  connect();
 
 
