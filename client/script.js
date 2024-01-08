@@ -77,8 +77,9 @@ async function handleSave(id) {
     await fetch('http://localhost:3000/editData',{
         "method" : "PUT",
         "headers" : {
-            "co"
-        }
+            "content-Type" : "text/json"
+        },
+        "body" : json_data,
 
     })
     
