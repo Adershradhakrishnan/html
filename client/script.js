@@ -15,13 +15,15 @@ async function geuserData() {
         content = content + `
         <tr>
         <td>${parsedUserData[i]._id}</td>
-        <td><input type="text" name="name" id="name-$${parsedUserData[i]._id}" value=${parsedUserData[i].name} disabled="true"</td>
-        <td><input type="email" name="email" id="email-$${parsedUserData[i]._id}" value=${parsedUserData[i].email} disabled="true"</td>
-        <td><input type="password" name="password" id="password-$${parsedUserData[i]._id}" value=${parsedUserData[i].password} disabled="true"</td>
-        <td><button onclick="handleEdit('${parsedUserData[i]._id})">Edit</button></td>
+        <td><input type="text" name="name" id="name-${parsedUserData[i]._id}" value='${parsedUserData[i].name}' disabled="true"></td>
+        <td><input type="email" name="email" id="email-${parsedUserData[i]._id}" value='${parsedUserData[i].email}' disabled="true"></td>
+        <td><input type="password" name="password" id="password-${parsedUserData[i]._id}" value='${parsedUserData[i].password}' disabled="true"></td>
+        <td><button onclick="handleEdit('${parsedUserData[i]._id}')">Edit</button></td>
+        <td><button onclick="handleSave('${parsedUserData[i]._id}')">Save</button></td>
         </tr>
         `
     }
+    console.log("content: ",content);
 
     tbody.innerHTML = content;
 
@@ -29,6 +31,7 @@ async function geuserData() {
 geuserData();
 
 function handleEdit(id) {
+    console.log("Reached edit");
     let _id = id;
     console.log("id: ",_id);
 
@@ -45,4 +48,40 @@ function handleEdit(id) {
     password.disabled = false;
 
 
+}
+
+async function handleSave(id) {
+
+    console.log("id: ",id);
+
+    let name = document.getElementById(`name-${_id}`).value;
+    console.log("name: ",name);
+    
+
+    let email = document.getElementById(`email-${_id}`).value;
+    console.log("email: ",email);
+    
+
+    let password = document.getElementById(`password-${_id}`).value;
+    console.log("password: ",password);
+
+    let data = {
+        id,
+        name,
+        email,
+        password,
+    }
+
+    let json_data = JSON.stringify(data);
+
+    await fetch('http://localhost:3000/editData',{
+        "method" : "PUT",
+        "headers" : {
+            "co"
+        }
+
+    })
+    
+
+    
 }
