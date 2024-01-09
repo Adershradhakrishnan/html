@@ -20,6 +20,7 @@ async function geuserData() {
         <td><input type="password" name="password" id="password-${parsedUserData[i]._id}" value='${parsedUserData[i].password}' disabled="true"></td>
         <td><button onclick="handleEdit('${parsedUserData[i]._id}')">Edit</button></td>
         <td><button onclick="handleSave('${parsedUserData[i]._id}')">Save</button></td>
+        <td><button onclick="handleDelete('${parsedUserData[i]._id}')">Delete</button></td>
         </tr>
         `
     }
@@ -30,7 +31,7 @@ async function geuserData() {
 }
 geuserData();
 
-function handleEdit(id) {
+ function handleEdit(id) {
     console.log("Reached edit");
     let _id = id;
     console.log("id: ",_id);
@@ -54,15 +55,15 @@ async function handleSave(id) {
 
     console.log("id: ",id);
 
-    let name = document.getElementById(`name-${_id}`).value;
+    let name = document.getElementById(`name-${id}`).value;
     console.log("name: ",name);
     
 
-    let email = document.getElementById(`email-${_id}`).value;
+    let email = document.getElementById(`email-${id}`).value;
     console.log("email: ",email);
     
 
-    let password = document.getElementById(`password-${_id}`).value;
+    let password = document.getElementById(`password-${id}`).value;
     console.log("password: ",password);
 
     let data = {
@@ -86,3 +87,26 @@ async function handleSave(id) {
 
     
 }
+
+ async function handleDelete(id) {
+
+    console.log("id: ",id);
+
+    let response = await fetch("http://localhost:3000/deleteData",{
+        "method" : "DELETE",
+        "headers" : {
+            "content-Type" : "text/plain",
+        },
+        "body" : id,
+    });
+
+    console.log("response: ",response);
+    let parsed_response = await response.text();
+    console.log("parsed_response: ",parsed_response);
+
+    if(parsed_response === "success") {
+        alert("Deletion successfull");
+    }else {
+        alert("Deletion failed");
+    }
+ }

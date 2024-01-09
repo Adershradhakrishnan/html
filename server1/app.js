@@ -3,7 +3,7 @@ const url = require('url');
 const port = 3000;
 const fs = require('fs');
 const queryString = require('querystring');
-const {MongoClient}=require('mongodb');
+const {MongoClient,ObjectId}=require('mongodb');
 
 const client = new MongoClient("mongodb://127.0.0.1:27017");
 
@@ -141,7 +141,34 @@ const server = http.createServer(async(req,res) => {
         })
       }
 
-    
+      //handle delete request
+
+      if(req.method === "DELETE" && parsed_url.pathname === "/deleteData") {
+        console.log("Reached delete route");
+
+        let body = "";
+        req.on('data',(chunks)=> {
+          console.log("chunks: ",chunks);
+          body = body + chunks.toString();
+          console.log("body: ",body);
+        });
+        req.on('end',async()=> {
+          let _id = new ObjectId(body);
+          await collection.deleteOne({_id})
+           .then((message)=> {
+            console.log("Deletion successfull");
+            res.writeHead(200,{"content-Type" : "text/plain"});
+            res.end("success");
+           })
+           .catch((error)=> {
+            console.log("Deletion failed");
+            res.writeHead(200,{"content-Type" : "text/plain"});
+            res.end("failed");
+           })
+        })
+      }
+
+
 
 });
 
