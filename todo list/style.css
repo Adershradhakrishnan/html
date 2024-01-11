@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: aqua;
+    background-color: green;
 }
 
 h2{
@@ -16,11 +16,16 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 900px;
+    margin-left: 930px;
+    margin-top: 20px;
+    
     
 }
 button a {
     color: black;
+    background-color: yellow;
+    text-decoration: none;
+    
 }
 
 table,th,td {
@@ -30,3 +35,19 @@ table,th,td {
     margin-left: 900px;
     margin-top: 30px;
 }
+
+.task{
+    background-color: aqua;
+    margin-left: 700px;
+    
+}
+
+.two{
+    background-color: blueviolet;
+}
+
+    
+
+
+
+
