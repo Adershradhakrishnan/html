@@ -20,16 +20,16 @@ const server = http.createServer(async(req,res) => {
 
     if(parsed_url.pathname === '/') {
         res.writeHead(200,{'Content-Type' : 'text/html'});
-        res.end(fs.readFileSync('../todo list/index.html'));
+        res.end(fs.readFileSync('../todolist/index.html'));
       }else if(parsed_url.pathname === '/style.css'){
         res.writeHead(200,{'Content-Type' : 'text/css'});
-        res.end(fs.readFileSync('../todo list/style.css'));
+        res.end(fs.readFileSync('../todolist/style.css'));
       }else if(parsed_url.pathname === '/add_user.html'){
         res.writeHead(200,{'Content-Type' : 'text/html'});
-        res.end(fs.readFileSync('../todo list/add_user.html'));
+        res.end(fs.readFileSync('../todolist/add_user.html'));
       }else if(parsed_url.pathname === '/script.js'){
         res.writeHead(200,{'Content-Type' : 'text/javascript'});
-        res.end(fs.readFileSync('../todo list/script.js'));
+        res.end(fs.readFileSync('../todolist/script.js'));
       }
 
       if(req.method === "POST" && parsed_url.pathname === "/submit") {
@@ -73,6 +73,17 @@ const server = http.createServer(async(req,res) => {
     
         });
     } 
+
+    if(req.method === "GET" && parsed_url.pathname === "/getData") {
+      let data = await collection.find().toArray();
+      console.log("data: ",data);
+
+      let json_data = JSON.stringify(data);
+      console.log("json_data: ",json_data);
+
+      res.writeHead(200,{"content-Type" : "text/json"});
+      res.end(json_data);
+    }
 
 });
 

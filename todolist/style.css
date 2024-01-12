@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: green;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 930px;
+    margin-top: 20px;
+    
+    
+}
+button a {
+    color: black;
+    background-color: yellow;
+    text-decoration: none;
+    
+}
+
+table,th,td {
+    border: 2px solid white;
+    border-collapse: collapse;
+    padding: 8px;
+    margin-left: 900px;
+    margin-top: 30px;
+}
+
+.task{
+    background-color: aqua;
+    margin-left: 700px;
+    
+}
+
+.two{
+    background-color: blueviolet;
+}
+.add{
+    color: black;
+}
+th{
+    color: black;
+}
+
+    
+
+
+
+
