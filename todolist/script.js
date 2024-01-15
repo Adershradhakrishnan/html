@@ -15,7 +15,11 @@ async function geuserData() {
         content = content + `
         <tr>
         <td>${parsedUserData[i]._id}</td>
-        <td><input type="text" name="name" id="name-${parsedUserData[i]._id}" value='${parsedUserData[i].name}' disabled="true"></td>
+        <td><input type="text" name="name" id="name-${parsedUserData[i]._id}" value='${parsedUserData[i].name}' color:"black"  disabled="true"></td>
+        <td><button onclick="handleEdit('${parsedUserData[i]._id}')">Edit</button></td>
+        <td><button onclick="handleSave('${parsedUserData[i]._id}')">Save</button></td>
+        <td><button onclick="handleDelete('${parsedUserData[i]._id}')">Delete</button></td>
+        
         
         </tr>
         `
@@ -26,3 +30,67 @@ async function geuserData() {
 
 }
 geuserData();
+
+
+function handleEdit(id) {
+    console.log("Reached edit");
+    let _id = id;
+    console.log("id: ",_id);
+
+    let name = document.getElementById(`name-${_id}`);
+    console.log("name: ",name);
+    name.disabled = false;
+}
+
+async function handleSave(id) {
+
+    console.log("id: ",id);
+
+    let name = document.getElementById(`name-${id}`).value;
+    console.log("name: ",name);
+    
+
+    let data = {
+        id,
+        name,
+       
+    }
+
+    let json_data = JSON.stringify(data);
+
+    await fetch('http://localhost:3000/editData',{
+        "method" : "PUT",
+        "headers" : {
+            "content-Type" : "text/json"
+        },
+        "body" : json_data,
+
+    })
+    
+    
+
+    
+}
+
+async function handleDelete(id) {
+
+    console.log("id: ",id);
+
+    let response = await fetch("http://localhost:3000/deleteData",{
+        "method" : "DELETE",
+        "headers" : {
+            "content-Type" : "text/plain",
+        },
+        "body" : id,
+    });
+
+    console.log("response: ",response);
+    let parsed_response = await response.text();
+    console.log("parsed_response: ",parsed_response);
+
+    if(parsed_response === "success") {
+        alert("Deletion successfull");
+    }else {
+        alert("Deletion failed");
+    }
+ }

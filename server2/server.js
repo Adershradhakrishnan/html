@@ -10,7 +10,7 @@ const client = new MongoClient("mongodb://127.0.0.1:27017");
 
 const server = http.createServer(async(req,res) => {
 
-    const db=client.db("users");
+    const db=client.db("task1");
   const collection=db.collection("users_coll");
 
     console.log("url: ",req.url);
@@ -84,6 +84,75 @@ const server = http.createServer(async(req,res) => {
       res.writeHead(200,{"content-Type" : "text/json"});
       res.end(json_data);
     }
+
+
+      //handle PUT request
+      if(req.method === "PUT" && parsed_url.pathname === "/editData") {
+        let body = "";
+        req.on('data',(chunks)=> {
+          console.log("chunks: ",chunks);
+          body = body + chunks.toString();
+          console.log("body: ",body);
+        });
+
+        req.on('end',async ()=> {
+           console.log("body: ",body);
+           let data = JSON.parse(body);
+           let id = data.id;
+           console.log("id: ",id);
+           console.log("typeof(id): ",typeof(id));
+           let _id = new ObjectId(id);
+           console.log("_id: ",_id);
+           console.log("typeof(_id): ",typeof(_id));
+
+           let upadateDates = {
+              name : data.name,
+             
+           }
+
+           await collection.updateOne({_id},{$set : upadateDates})
+               .then((message)=> {
+                console.log("Document updated successfully: ",message);
+                res.writeHead(200,{"content-Type" : "text/plain"});
+                res.end("Updated successfully");
+               })
+               .catch((error)=> {
+                 console.log("Document not updated: ",error);
+                 res.writeHead(400,{"content-Type" : "text/plain"});
+                 res.end("Updation failed");
+               })
+        })
+      }
+
+       //handle delete request
+
+       if(req.method === "DELETE" && parsed_url.pathname === "/deleteData") {
+        console.log("Reached delete route");
+
+        let body = "";
+        req.on('data',(chunks)=> {
+          console.log("chunks: ",chunks);
+          body = body + chunks.toString();
+          console.log("body: ",body);
+        });
+        req.on('end',async()=> {
+          let _id = new ObjectId(body);
+          await collection.deleteOne({_id})
+           .then((message)=> {
+            console.log("Deletion successfull");
+            res.writeHead(200,{"content-Type" : "text/plain"});
+            res.end("success");
+           })
+           .catch((error)=> {
+            console.log("Deletion failed");
+            res.writeHead(200,{"content-Type" : "text/plain"});
+            res.end("failed");
+           })
+        })
+      }
+
+
+
 
 });
 

@@ -12,11 +12,11 @@ h2{
     margin-left: 0px;
 }
 
-button {
+.hai {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 930px;
+    /* margin-left: 930px; */
     margin-top: 20px;
     
     
@@ -32,8 +32,9 @@ table,th,td {
     border: 2px solid white;
     border-collapse: collapse;
     padding: 8px;
-    margin-left: 900px;
+    /* margin-left: 900px; */
     margin-top: 30px;
+    color :black;
 }
 
 .task{
@@ -45,10 +46,16 @@ table,th,td {
 .two{
     background-color: blueviolet;
 }
-.add{
+.add {
     color: black;
 }
 th{
+    color: black;
+}
+tbody{
+    color: black;
+}
+tbody input{
     color: black;
 }
 
