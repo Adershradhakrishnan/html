@@ -39,7 +39,7 @@ dotenv.config();
         res.status(201).send("success");
     })
     .catch((error)=>{
-        console.log("Document inseertion failed:",error);
+        console.log("Document insertion failed:",error);
     })
  })
 
@@ -63,8 +63,60 @@ dotenv.config();
     let _id = new ObjectId(id);
     console.log("_id: ",_id);
     console.log("typeof(_id): ",typeof(_id));
- })
 
- app.listen(port,()=>{
-     console.log(`server started at http://localhost:${port}`);
- })
+    let updateDates = {
+      name : data.name,
+      email : data.email,
+      password : data.password,
+    }
+    await collection.updateOne({_id},{$set : updateDates})
+    .then((message)=>{
+      console.log("Document updated successfull:",message);
+      res.status(200).send("success")
+    })
+    .catch((error)=>{
+      console.log("Document not updated: ",error);
+      res.status(400).send("failed");
+    })
+ });
+
+ app.delete('/deleteData',async(req,res)=>{
+   let data = req.body;
+   console.log("data: ",data);
+
+   let id = data.id;
+   console.log("id: ",id);
+
+   let _id = new ObjectId(id);
+   console.log("_id: ",_id);
+
+   await collection.deleteOne({_id})
+   .then((message)=>{
+      console.log("Deletion successfull");
+      res.status(200).send("success")
+    })
+    .catch((error)=>{
+      console.log("Deletion failed");
+      res.status(400).send("failed");
+    })
+ });
+   
+
+   async function connect(){
+      await client.connect()
+      .then((message)=>{
+         console.log("database connection established",message);
+      })
+      .catch((error)=>{
+         console.log("Database connection error: ",error);
+      })
+      .finally(()=>{
+         app.listen(port,()=>{
+            console.log(`server started at http://localhost:${port}`);
+        })
+      });
+   }
+
+   connect();
+
+ 

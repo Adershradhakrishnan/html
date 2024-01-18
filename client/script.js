@@ -2,7 +2,7 @@ console.log("Hello world");
 
 async function geuserData() {
      
-    let userData = await fetch('http://localhost:3000/getData');
+    let userData = await fetch('/getData');
     console.log("userData: ",userData);
     let parsedUserData = await userData.json();
     console.log("parsedUserData: ",parsedUserData);
@@ -75,10 +75,10 @@ async function handleSave(id) {
 
     let json_data = JSON.stringify(data);
 
-    await fetch('http://localhost:3000/editData',{
+    await fetch('/editData',{
         "method" : "PUT",
         "headers" : {
-            "content-Type" : "text/json"
+            "Content-Type" : "application/json"
         },
         "body" : json_data,
 
@@ -92,10 +92,10 @@ async function handleSave(id) {
 
     console.log("id: ",id);
 
-    let response = await fetch("http://localhost:3000/deleteData",{
+    let response = await fetch("/deleteData",{
         "method" : "DELETE",
         "headers" : {
-            "content-Type" : "text/plain",
+            "Content-Type" : "application/plain",
         },
         "body" : id,
     });
