@@ -95,7 +95,7 @@ async function handleSave(id) {
     let response = await fetch("/deleteData",{
         "method" : "DELETE",
         "headers" : {
-            "Content-Type" : "application/plain",
+            "Content-Type" : "text/plain",
         },
         "body" : id,
     });

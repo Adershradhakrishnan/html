@@ -28,6 +28,7 @@ dotenv.config();
  app.use('/',express.static(__dirname + "/client"));
  app.use(express.urlencoded({extended: false})); //to parse form datas
  app.use(express.json()); //to parse json data
+ app.use(express.text());
 
  app.post('/submit',async(req,res)=>{
     let data = req.body;
@@ -84,7 +85,7 @@ dotenv.config();
    let data = req.body;
    console.log("data: ",data);
 
-   let id = data.id;
+   let id = data;
    console.log("id: ",id);
 
    let _id = new ObjectId(id);
