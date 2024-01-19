@@ -2,7 +2,7 @@
 
 async function geuserData() {
      
-    let userData = await fetch('http://localhost:3000/getData');
+    let userData = await fetch('http://127.0.0.1:3000/getData');
     console.log("userData: ",userData);
     let parsedUserData = await userData.json();
     console.log("parsedUserData: ",parsedUserData);
@@ -58,7 +58,7 @@ async function handleSave(id) {
 
     let json_data = JSON.stringify(data);
 
-    await fetch('http://localhost:3000/editData',{
+    await fetch('http://127.0.0.1:3000/editData',{
         "method" : "PUT",
         "headers" : {
             "content-Type" : "text/json"
@@ -76,7 +76,7 @@ async function handleDelete(id) {
 
     console.log("id: ",id);
 
-    let response = await fetch("http://localhost:3000/deleteData",{
+    let response = await fetch("http://127.0.0.1:3000/deleteData",{
         "method" : "DELETE",
         "headers" : {
             "content-Type" : "text/plain",
