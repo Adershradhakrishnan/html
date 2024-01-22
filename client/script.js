@@ -1,5 +1,41 @@
 console.log("Hello world");
 
+async function submitForm(){
+    let name = document.getElementById('name').value;
+    console.log("name: ",name);
+
+    let email = document.getElementById('email').value;
+    console.log("email: ",email);
+
+    let password = document.getElementById('password').value;
+    console.log("paswword: ",password);
+
+    let data = {
+        name,
+        email,
+        password,
+    }
+
+    let json_data = JSON.stringify(data);
+
+    let response = await fetch('/submit',{
+        "method" : "POST",
+        "headers" : {
+            "Content-Type" : "application/json",
+        },
+        "body" : json_data,
+
+    });
+
+    let parsed_response = await response.text();
+
+    if(parsed_response === "success") {
+        alert("Form submitted succesfully");
+    }else {
+        alert("Form submission failed");
+    }
+}
+
 async function geuserData() {
      
     let userData = await fetch('/getData');
@@ -29,7 +65,7 @@ async function geuserData() {
     tbody.innerHTML = content;
 
 }
-geuserData();
+// geuserData();
 
  function handleEdit(id) {
     console.log("Reached edit");
@@ -108,5 +144,25 @@ async function handleSave(id) {
         alert("Deletion successfull");
     }else {
         alert("Deletion failed");
+    }
+ }
+
+ function validateName() {
+    let name = document.getElementById('name').value;
+    console.log("name: ",name);
+
+    let name_error = document.getElementById('name_error');
+
+    let name_regex = /^[A-Za-z]{2,30}( [A-Za-z]{2,30})?$/;
+
+    let isNameValid = name_regex.test(name);
+    console.log("isNameValid: ",isNameValid);
+
+    if(!isNameValid) {
+        name_error.innerHTML = "Invalid Name";
+        return;
+    }else {
+        name_error.innerHTML = "";
+        return;
     }
  }

@@ -9,4 +9,113 @@ dotenv.config();
  const db = client.db('todo');
  const collection = db.collection('users');
 
+ console.log("__dirname : ",__dirname);
+ app.use('/',express.static(__dirname + "/todolistss"));
+ app.use(express.urlencoded({extended: false})); //to parse form datas
+ app.use(express.json()); //to parse json data
+ app.use(express.text());
+
+ app.post('/submit',async(req,res)=>{
+    let data = req.body;
+    console.log("data:",data);
+
+    await collection.insertOne(data)
+    .then((message)=>{
+        console.log("Document inserted successfully");
+        res.status(201).send("success");
+    })
+    .catch((error)=>{
+        console.log("Document insertion failed:",error);
+    })
+ })
+
+ app.get('/getData',async (req,res) => {
+    let data = await collection.find().toArray();
+    console.log("data: ",data);
+
+    let json_data = JSON.stringify(data);
+    console.log("json_data: ",json_data);
+
+    res.status(200).send(json_data);
+ });
+
+ app.put('/editData',async(req,res)=> {
+    let data = req.body;
+    console.log("data: ",data);
+
+    let id = data.id;
+    console.log("id: ",id);
+    console.log("typeof(id): ",typeof(id));
+    let _id = new ObjectId(id);
+    console.log("_id: ",_id);
+    console.log("typeof(_id): ",typeof(_id));
+
+    let updateDates = {
+      name : data.name,
+      
+      
+    }
+    await collection.updateOne({_id},{$set : updateDates})
+    .then((message)=>{
+      console.log("Document updated successfull:",message);
+      res.status(200).send("success")
+    })
+    .catch((error)=>{
+      console.log("Document not updated: ",error);
+      res.status(400).send("failed");
+    })
+ });
+
+ app.delete('/deleteData',async(req,res)=>{
+    let data = req.body;
+    console.log("data: ",data);
+ 
+    let id = data;
+    console.log("id: ",id);
+ 
+    let _id = new ObjectId(id);
+    console.log("_id: ",_id);
+ 
+    await collection.deleteOne({_id})
+    .then((message)=>{
+       console.log("Deletion successfull");
+       res.status(200).send("success")
+     })
+     .catch((error)=>{
+       console.log("Deletion failed");
+       res.status(400).send("failed");
+     })
+  });
+
+  async function connect(){
+    await client.connect()
+    .then((message)=>{
+       console.log("database connection established",message);
+    })
+    .catch((error)=>{
+       console.log("Database connection error: ",error);
+    })
+    .finally(()=>{
+       app.listen(port,()=>{
+          console.log(`server started at http://localhost:${port}`);
+      })
+    });
+ }
+
+ connect();
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
  
