@@ -8,9 +8,20 @@
 </head>
 <body>
     <form>
-        <input type="text" id="name"  name="name" placeholder="enter your name">
-        <input type="email" id="email" name="email" placeholder="enter your email">
-        <input type="password" id="password" name="password" placeholder="enter your password">
+        <div class="name">
+        <input type="text" id="name"  name="name" placeholder="enter your name" onkeyup="validateName()">
+        <div id="name-error"></div>
+        </div>
+
+        <div class="email">
+        <input type="email" id="email" name="email" placeholder="enter your email" onkeyup="validateEmail()">
+        <div id="email-error"></div>
+        </div>
+
+        <div class="password">
+        <input type="password" id="password" name="password" placeholder="enter your password" onkeyup="validatePassword()">
+        <div id="password-error"></div>
+        </div>
         
         <button type="button" onclick="submitForm()">submit</button>
 
