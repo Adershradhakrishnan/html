@@ -76,6 +76,22 @@ app.get('/getData',(req,res)=> {
     }
 })
 
+app.put('/editData',(req,res)=>{
+    const editData = req.body;
+
+    const folderpath = './datas';
+    const fileName = 'datas.json';
+    const filePath = path.join(folderpath,fileName);
+
+    if (!fs.existsSync(folderpath)) {
+        fs.mkdirSync(folderpath, { recursive: true });
+    }
+
+    let fileContent = fs.readFileSync(filePath, 'utf-8');
+    let dataArr = [];
+
+})
+
 app.listen(process.env.PORT,()=>{
     console.log(`server started at http://localhost:${process.env.PORT}`);
 });
