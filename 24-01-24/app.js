@@ -60,6 +60,22 @@ app.post('/submit',(req,res) =>{
 
 })
 
+app.get('/getData',(req,res)=> {
+    const folderpath = './datas';
+    const fileName = 'datas.json';
+    const filePath = path.join(folderpath,fileName);
+
+    if (!fs.existsSync(filePath)) {
+        res.status(400).send('Data not found');
+
+    }else {
+        const fileContent = fs.readFileSync(filePath, "utf-8");
+        const dataArr = JSON.parse(fileContent);
+
+        res.status(200).send(dataArr);
+    }
+})
+
 app.listen(process.env.PORT,()=>{
     console.log(`server started at http://localhost:${process.env.PORT}`);
 });
