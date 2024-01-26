@@ -53,6 +53,10 @@ app.post('/submit',async(req,res)=>{
     })
 
 });
+   app.get('/getData',async(req,res)=>{
+    const datas = await model.find();
+    res.status(201).send("success");
+   });
 
  async function connect() {
     try {
