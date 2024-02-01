@@ -21,7 +21,7 @@ exports.login = async function(req,res){
             console.log("db_password: ",db_password);
 
             if(password === db_password){
-                let access_token = jwt.sign({user_id:user.user_id},process.env.PRIVATE_KEY,{expiresIn : "Id"});
+                let access_token = jwt.sign({user_id:user.user_id},process.env.PRIVATE_KEY,{expiresIn : "1d"});
                 console.log("access_token: ",access_token);
 
                 let response = success_function({

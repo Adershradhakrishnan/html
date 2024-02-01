@@ -45,13 +45,7 @@ const error_function = require('../utils/response-handler').error_function;
     }
 }
 
- exports.getUserData =async function(req,res){
-    try{
-        cons
-    }
-
-}
-
+ 
 async function updateUser(){
 
 }

@@ -18,7 +18,7 @@ async function submitForm(){
 
     let json_data = JSON.stringify(data);
 
-    let response = await fetch('/submit',{
+    let response = await fetch('/user',{
         "method" : "POST",
         "headers" : {
             "Content-Type" : "application/json",
@@ -225,7 +225,7 @@ async function handleSave(id) {
     let email = document.getElementById('login_email').value;
     console.log("email: ",email);
 
-    let password = document.getElementById('login_password');
+    let password = document.getElementById('login_password').value;
     console.log("passwor: ",password);
 
     let datas = {
@@ -233,15 +233,15 @@ async function handleSave(id) {
         password,
     }
 
-    let json_datas = JSON.stringify(datas);
-    console.log("json_datas: ",json_datas);
+    let json_data = JSON.stringify(datas);
+    console.log("json_data: ",json_data);
 
     let response = await fetch('http://localhost:3001/login',{
         method : "POST",
         headers : {
             "Content-Type" : "application/json",
         },
-        body : json_datas,
+        body : json_data,
     });
 
     let parsed_response = await response.json();

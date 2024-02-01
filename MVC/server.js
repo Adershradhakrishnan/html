@@ -5,6 +5,7 @@ dotenv.config();
 const connect = require('./db/config');
 const userRoutes = require('./routes/userRoutes');
 const authRoutes =require('./routes/authRoutes');
+app.use('/',express.static(__dirname + "/client"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(userRoutes);
