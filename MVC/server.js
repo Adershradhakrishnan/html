@@ -8,6 +8,7 @@ const authRoutes =require('./routes/authRoutes');
 app.use('/',express.static(__dirname + "/client"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
+app.use(express.text());
 app.use(userRoutes);
 app.use(authRoutes);
 //Database connection

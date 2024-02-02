@@ -1,4 +1,4 @@
-console.log("Hello world");
+// console.log("Hello world");
 
 async function submitForm(){
     let name = document.getElementById('name').value;
@@ -18,7 +18,7 @@ async function submitForm(){
 
     let json_data = JSON.stringify(data);
 
-    let response = await fetch('/user',{
+    let response = await fetch('http://localhost:3001/user',{
         "method" : "POST",
         "headers" : {
             "Content-Type" : "application/json",
@@ -31,6 +31,7 @@ async function submitForm(){
 
     if(parsed_response === "success") {
         alert("Form submitted succesfully");
+        window.location.href = "login.html";
     }else {
         alert("Form submission failed");
     }
