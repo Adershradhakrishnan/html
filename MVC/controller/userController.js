@@ -68,7 +68,7 @@ const error_function = require('../utils/response-handler').error_function;
     }
 }
 
-  exports.geuserData= async function (req,res){
+  exports.geUserData= async function (req,res){
    try{
     const userList = await users.find();
 
