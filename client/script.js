@@ -10,31 +10,50 @@ async function submitForm(){
     let password = document.getElementById('password').value;
     console.log("paswword: ",password);
 
-    let data = {
-        name,
-        email,
-        password,
+    let imageInput = document.getElementById('image').value;
+
+    if(imageInput.files && imageInput.files[0]){
+        const reader = new FileReader();
+
+        reader.onload =function(e){
+            const base64Image = e.target.result;
+
+            console.log("base64Image: ",base64Image);
+
+            let data = {
+                name,
+                email,
+                password,
+                base64Image,
+            }
+            let json_data = JSON.stringify(data);
+
+            let response =  fetch('/submit',{
+                "method" : "POST",
+                "headers" : {
+                    "Content-Type" : "application/json",
+                },
+                "body" : json_data,
+        
+            });
+        
+            let parsed_response =  response.text();
+        
+            if(parsed_response === "success") {
+                alert("Form submitted succesfully");
+            }else {
+                alert("Form submission failed");
+            }
+        }
+        reader.readAsDataURL(imageInput.files[0]);
+         
+        }
+
     }
 
-    let json_data = JSON.stringify(data);
+    
 
-    let response = await fetch('/submit',{
-        "method" : "POST",
-        "headers" : {
-            "Content-Type" : "application/json",
-        },
-        "body" : json_data,
-
-    });
-
-    let parsed_response = await response.text();
-
-    if(parsed_response === "success") {
-        alert("Form submitted succesfully");
-    }else {
-        alert("Form submission failed");
-    }
-}
+   
 
 async function geuserData() {
      
