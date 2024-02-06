@@ -10,7 +10,7 @@ async function submitForm(){
     let password = document.getElementById('password').value;
     console.log("paswword: ",password);
 
-    let imageInput = document.getElementById('image').value;
+    let imageInput=document.getElementById('image');
 
     if(imageInput.files && imageInput.files[0]){
         const reader = new FileReader();
