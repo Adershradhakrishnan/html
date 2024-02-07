@@ -73,7 +73,8 @@ app.get('/test',(req,res)=>{
         return res.status(400).send("user already exists");
     }
 
-     const Image = base64Image.split
+     const Image = base64Image.split(';base64,').pop();
+     const binaryImage = Buffer.from(Image, 'base64');
     //save the image to the server's file system
 
     const uploadDir = path.join(__dirname,'uploads');
