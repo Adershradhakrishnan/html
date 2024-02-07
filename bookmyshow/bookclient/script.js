@@ -30,14 +30,27 @@ async function submitForm(){
     }
 }
 
-async function getUserData() {
-    let userData = await fetch('/getData');
-    console.log("userData: ",userData);
-    let parsedUserData = await userData.json();
-    console.log("parsedUserData: ",parsedUserData);
+async function getFilmData() {
+    let filmData = await fetch('/getFilms');
+    console.log("filmData: ",filmData);
+    let parsedFilmData = await filmData.json();
+    console.log("parsedFilmData: ",parsedFilmData);
 
-    let tbody = document.getElementById('bodys');
+    let filmcontainer = document.getElementById('card-body');
     let content ='';
+
+    for(let i=0;i<parsedFilmData.length;i++){
+        content += `
+        <div class="card-body>
+        <img src="../../bookmyshow/images/downloadvaliban.jpg>
+        <h5 class="card-title" name="title" id="title-${parsedFilmData[i]._id}" value="${parsedFilmData[i].title}">
+        <h6 class="card-actor" name="actot" id="actor-${parsedFilmData[i]._id}" value="${parsedFilmData[i].actor}">
+        <h6 class="card-director" name="director" id="director-${parsedFilmData[i]._id}" value="${parsedFilmData[i].director}">
+        <div>
+        `;
+    }
+
+    filmcontainer.innerHTML = content;
      
 
 

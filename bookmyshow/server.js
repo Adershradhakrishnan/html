@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const multer = require('multer');
 const dotenv = require('dotenv');
+const path = require('path');
 const error = require('mongoose/lib/error');
 dotenv.config();
 let port = process.env.PORT;
 
 app.use(express.static(__dirname + "../../bookclient"));
+app.use(express.static(path.join(__dirname, 'image')));
+app.use('/images',express.static(path.join(__dirname, 'images')));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
@@ -26,17 +30,35 @@ let schema = new mongoose.Schema({
     },
 });
 
-const model = mongoose.model("users",schema);
+const model = mongoose.model("film",schema);
+
+const storage = multer.memoryStorage();
+const upload = multer({storage: storage});
 
 app.get('/test',(req,res)=>{
     res.status(200).send("Test success");
 });
 
 app.post('/submit',async(req,res)=>{
-    let datas = req.body;
-    console.log("datas: ",datas);
+    let data = req.body;
+    console.log("data: ",data);
 
-    await model.create(datas)
+    const isUserExist = await model.findOne({title:data.title});
+    console.log("isUserExist: ",isUserExist);
+
+    if(isUserExist){
+        res.status(400).send("user already exists");
+        return;
+    }
+
+    const result = await model.insertOne({
+        title: req.body.title,
+        actor: req.body.actor,
+        director:req.body.director,
+        image: req.file.buffer.toString('base64')
+    })
+
+    
     .then((message)=>{
         console.log("Document inserted successfully");
         res.status(201).send("success");
@@ -48,7 +70,7 @@ app.post('/submit',async(req,res)=>{
 
 });
 
-app.get('/getData',async(req,res)=>{
+app.get('/getFilms',async(req,res)=>{
     const datas = await model.find();
     res.status(201).send("success");
    });
