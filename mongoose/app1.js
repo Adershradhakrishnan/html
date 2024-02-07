@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const fs=require('fs');
 const path =require('path');
+
 const error = require('mongoose/lib/error');
 const { String } = require('mongoose/lib/error/messages');
 dotenv.config();
@@ -71,37 +72,44 @@ app.get('/test',(req,res)=>{
     if(isUserExist){
         return res.status(400).send("user already exists");
     }
+
+     const Image = base64Image.split
     //save the image to the server's file system
 
     const uploadDir = path.join(__dirname,'uploads');
     if(!fs.existsSync(uploadDir)){
         fs.mkdirSync(uploadDir);
     }
-    //convert base64 string to buffer 
+//     //convert base64 string to buffer 
     const imageBuffer = Buffer.from(base64Image,'base64');
 
-    //generate a unique filename (you may use a different approach)
+//     //generate a unique filename (you may use a different approach)
     const fileName = `${Date.now()}.png`;
 
-    //write buffer to file
+//     //write buffer to file
     const filePath = path.join(uploadDir,fileName);
     fs.writeFileSync(filePath,imageBuffer);
 
-    //save userdata(including image path)to mongodb
-    try{
+//     //save userdata(including image path)to mongodb
+   try{
         await model.create({
-            name:name,
+             name:name,
             email:email,
             password:password,
             image:filePath //save the file path to the image in the database
-        });
+       });
         console.log("Document inserted successfully");
         res.status(201).send("Success");
-    }catch (error) {
+   }catch (error) {
         console.error("Document insertion failed:",error);
-        res.status(400).send("Failed to insert document");
+       res.status(400).send("Failed to insert document");
     }
-   })
+    })
+   
+   
+
+   
+   
 
    app.get('/getData',async(req,res)=>{
     const datas = await model.find();
