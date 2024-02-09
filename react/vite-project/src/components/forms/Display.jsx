@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 
 function Display({data}) {
     console.log("Display component rendering...")

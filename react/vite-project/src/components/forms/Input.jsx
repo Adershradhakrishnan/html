@@ -6,20 +6,21 @@ function Input({onsubmit}) {
     const [name,setName] = useState('');
 
     const onSubmit = (e)=>{
-        e.preventDafault();
+        e.preventDefault();
+        console.log("name: ",name);
         onsubmit(name);
+
     }
 
     const handleInputChange = (e) =>{
-        setName(e.taret.value)
+        setName(e.target.value)
     }
+
     return(
         <>
         <form onSubmit={onSubmit}>
             <input type="text" name="name" id="name" placeholder="enter your name" onChange={handleInputChange}/>
-            <input type="submit"/>
-
-            
+            <input type="submit"/>            
         </form>
         </>
     )

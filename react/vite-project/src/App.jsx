@@ -2,7 +2,7 @@
 // import Greeting1 from "../../vite-project/src/components/greetings/greeting1"
 // import counter from "./components/counters/counter";
 // import counter1 from "./components/counters/counter1";
-import Parent from "./components/forms/parent";
+import Parent from "./components/forms/Parent";
 
 function App() {
 
