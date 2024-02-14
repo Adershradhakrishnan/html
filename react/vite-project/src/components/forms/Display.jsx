@@ -3,7 +3,8 @@ function Display({data}) {
     console.log("Display component rendering...")
     return(
         <>
-        <p>Data:{data}</p>
+        <p>Name:{data.name}</p>
+        <p>Email:{data.email}</p>
         </>
     )
 }
