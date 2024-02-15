@@ -11,7 +11,7 @@ function Landingnavbar() {
                     <li>Home</li>
                     <li>Information</li>
                     <li>Accessories</li>
-                    <li>Contactus</li>
+                    <li>Contactas</li>
                 </ul>
             </div>
         </nav>

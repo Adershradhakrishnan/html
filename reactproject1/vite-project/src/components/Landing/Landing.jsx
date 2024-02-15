@@ -1,4 +1,5 @@
 import Landingnavbar from "./Landingnavbar/Landingnavbar";
+import Landingfooter from "./Landingfooter/Landingfooter";
 
 import './Landing.css';
 
@@ -9,6 +10,7 @@ function Landingpage(){
         <div className="Login">
             <button>Login</button>
         </div>
+        <Landingfooter/>
         </>
     )
 }
