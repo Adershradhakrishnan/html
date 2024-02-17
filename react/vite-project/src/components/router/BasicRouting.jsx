@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router,Route,Routes,Link} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Routes,Link,useParams} from 'react-router-dom';
 import Nav from "./Nav";
 
 function Home(){
@@ -7,6 +7,7 @@ function Home(){
 }
 
 function About() {
+    let {name} = useParams();
     return<h2>About Page</h2>
 }
 
@@ -24,7 +25,7 @@ function BasicRouting(){
                 <Routes>
                     <Route path="/" exact element={<Nav/>}/>
                     <Route path='/home' exact element={<Home/>}/>
-                    <Route path='/about' exact element={<About/>}/>
+                    <Route path="/about/:name" exact element={<About/>}/>
                 </Routes>
             </div>
         </Router>

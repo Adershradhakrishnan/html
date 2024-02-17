@@ -8,7 +8,7 @@ const error = require('mongoose/lib/error');
 dotenv.config();
 let port = process.env.PORT;
 
-app.use(express.static(__dirname + "../../bookclient"));
+app.use(express.static(__dirname + "/bookclient"));
 app.use(express.static(path.join(__dirname, 'image')));
 app.use('/images',express.static(path.join(__dirname, 'images')));
 app.use(express.json());
@@ -78,7 +78,7 @@ app.get('/getFilms',async(req,res)=>{
  async function connect() {
     try {
         await mongoose.connect('mongodb://127.0.0.1:27017/ums');
-        console.log("Dataabase connection established");
+        console.log("Database connection established");
     } catch (error){
         console.log("Database not connected: ",error);
     }finally{

@@ -8,8 +8,8 @@ function Landingfooter() {
         <>
         <div>
             <div className="zero">
-                <h4>Aboutus</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus totam quia rerum</p>
+                <h4 className="one">Aboutus</h4>
+                <p className="two">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus totam quia rerum</p>
             </div>
         </div>
         </>
