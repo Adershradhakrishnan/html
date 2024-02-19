@@ -10,8 +10,9 @@
 // import MyComponentWithUpperCase from "./components/HigherOrderComponent/MyComponentWithUpperCase";
 // import MyPureComponent from "./components/PureComponent/MyPureComponent";
 // import MyPureComponent1 from "./components/PureComponent/MyPureComponent1";
- import BasicRouting from "./components/router/BasicRouting";
+//  import BasicRouting from "./components/router/BasicRouting";
 // import NestedRouting from "./components/NestedRouting/NestedRouting";
+import Parent from "./components/hooks/useCallback/Parent";
 
 function App() {
 
@@ -28,8 +29,9 @@ function App() {
       {/* <MyComponentWithUpperCase text={"hello world"}/> */}
       {/* <MyPureComponent message="hello"/> */}
       {/* <MyPureComponent1/> */}
-       <BasicRouting/> 
+       {/* <BasicRouting/>  */}
       {/* <NestedRouting/> */}
+      <Parent/>
     </>
   )
 }

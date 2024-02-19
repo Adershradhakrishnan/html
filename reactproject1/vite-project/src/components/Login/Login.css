@@ -1,10 +1,11 @@
 .data{
     background-color: orchid;
-    height: 50vh;
+    height: 70vh;
 }
 
 .logindata{
     margin: auto;
+    margin-left: 750px;
 }
 
 .logindata label,button{
@@ -18,4 +19,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 900px;
 }
+.seven{
+    margin-left: 750px;
+}
+

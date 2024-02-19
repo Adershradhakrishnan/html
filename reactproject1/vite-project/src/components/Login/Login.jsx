@@ -7,7 +7,7 @@ const Login = () =>{
 
     return(
         <div className="data">
-            <h2>Login</h2>
+            <h2 className="seven">LOGIN</h2>
             <form className="logindata">
                 <label htmlFor="name">Enter Your UserName</label>
                 <input type="text" placeholder="Username" name="name" value={username} onChange={(e)=>setUserName(e.target.value)}/>
@@ -15,7 +15,7 @@ const Login = () =>{
                 <input type="password" placeholder="password" name="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
 
                 <div className="detail">
-                    <button type="submit">Login</button>
+                    <button><Link to={'/adduser'}>Login</Link></button>
                 </div>
             </form>
         </div>
