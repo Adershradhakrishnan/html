@@ -37,6 +37,10 @@
     margin-top: 10px;
     
 }
+#fifty{
+    padding: 20px;
+    background-color: white;
+}
 #menu{
     height: 25px;
     margin-left: 20px;
@@ -52,8 +56,15 @@
     margin: 10px;
     margin-left: 10px;
 }
+.list-left,ul{
+    margin-left: opx;
+}
 .list-right,ul{
    margin-left: 300px;
+}
+#imageeee{
+    width: 95%;
+    padding: 20px;
 }
 .add-container{
     display: flex;
@@ -76,4 +87,60 @@
 }
 #bodys{
     background-color: aqua;
+}
+
+.card{
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+#card-body{
+    font-size: 30px;
+    color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#film-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 10px;
+}
+
+#card-body a{
+    font-size: 20px;
+    color: blueviolet;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-body{
+    padding: 20px;
+}
+
+#card-body img,a,h6,h5{
+    margin: 0 20px 0 10px;
+}
+.card{
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+.footer{
+    background-color: black;
+    color:white;
+
+}
+.footer ul li{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#imageeee{
+    margin-left: 80px;
 }
