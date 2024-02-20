@@ -12,7 +12,9 @@
 // import MyPureComponent1 from "./components/PureComponent/MyPureComponent1";
 //  import BasicRouting from "./components/router/BasicRouting";
 // import NestedRouting from "./components/NestedRouting/NestedRouting";
-import Parent from "./components/hooks/useCallback/Parent";
+// import Parent from "./components/hooks/useCallback/Parent";
+// import UseContextApp from "./components/hooks/UseContext/UseContextComponent";
+import UseContextComponent1 from "./components/hooks/UseContext/UseContextComponent1";
 
 function App() {
 
@@ -31,7 +33,9 @@ function App() {
       {/* <MyPureComponent1/> */}
        {/* <BasicRouting/>  */}
       {/* <NestedRouting/> */}
-      <Parent/>
+      {/* <Parent/> */}
+      {/* <UseContextApp/> */}
+      <UseContextComponent1/>
     </>
   )
 }
