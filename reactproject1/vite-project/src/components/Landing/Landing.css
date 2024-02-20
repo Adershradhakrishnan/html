@@ -1,4 +1,4 @@
-.Login{
+ /* .Login{
     background-color: aqua;
     height: 70vh;
     padding: 10px;
@@ -8,4 +8,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}  */
+
+.landing{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
 }
+
