@@ -29,12 +29,14 @@
     height: 25px;
     margin-left: 20px;
     margin-top: 10px;
+    
 }
 #addbutton{
     background: orangered;
     height: 25px;
     margin-left: 20px;
     margin-top: 10px;
+    
     
 }
 #fifty{
@@ -92,6 +94,11 @@
 .card{
     margin-top: 100px;
     margin-right: 50px;
+}
+
+.carded{
+    align-items: center;
+    text-align: center;
 }
 
 #card-body{
