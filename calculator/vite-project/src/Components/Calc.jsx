@@ -16,11 +16,15 @@ function Calculator(){
 
     const handleCalculate =()=>{
         try{
-            setResult(eval(input));
+            // setResult(eval(input));
+            const result = eval(input);
+            SetInput(result.toString());
         }catch(error){
             setResult('Error');
         }
     }
+
+    
 
     return(
         <div>
@@ -48,7 +52,7 @@ function Calculator(){
             <br/>
             <button onClick={handleCalculate}>=</button>
             <br/>
-            <p>Result:{result}</p>
+             {/* <p>Result:{result}</p>  */}
         </div>
     );
 }
